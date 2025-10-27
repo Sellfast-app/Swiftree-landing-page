@@ -75,7 +75,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>hello@Swiftree.ng</span>
+                <span>Support@swiftree.app</span>
               </div>
             </div>
           </div>
