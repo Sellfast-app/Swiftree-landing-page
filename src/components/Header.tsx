@@ -82,6 +82,9 @@ const Header = () => {
             <a href="#contact" className="text-foreground hover:text-green-primary transition-colors">
               Contact
             </a>
+            <a href="/about" className="text-foreground hover:text-green-primary transition-colors">
+              About
+            </a>
           </nav>
 
           {/* Auth Buttons */}
