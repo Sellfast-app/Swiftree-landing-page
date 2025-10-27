@@ -139,6 +139,13 @@ const Header = () => {
               >
                 Contact
               </a>
+              <a
+                href="/about"
+                className="block px-3 py-2 text-base font-medium text-foreground hover:text-green-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </a>
               <div className="px-3 py-2">
                 <div className="text-base font-medium text-foreground mb-2">Pricing</div>
                 {pricingPlans.map((plan) => (
