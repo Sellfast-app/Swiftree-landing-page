@@ -24,7 +24,7 @@ const About = () => {
         },
         {
             name: "Adindu Amarachukwu",
-            role: "Creative Director, Swiftree",
+            role: "Founding Product Designer, Swiftree",
             initials: "EW",
             image: "/edward-small.jpg",
             linkedin: "https://linkedin.com/in/amarachukwu-chizzy-458112245",
