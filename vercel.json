@@ -1,18 +1,5 @@
 {
-    "builds": [
-      {
-        "src": "swiftree/apps/landing/package.json",
-        "use": "@vercel/static-build",
-        "config": { "distDir": "dist" }
-      },
-      {
-        "src": "swiftree/apps/storefront/package.json",
-        "use": "@vercel/next"
-      }
-    ],
-    "routes": [
-      { "src": "/storefront/(.*)", "dest": "/storefront/$1" },
-      { "src": "/(.*)", "dest": "/index.html" }
-    ]
+    "buildCommand": "npm run build:landing",
+    "outputDirectory": "swiftree/apps/landing/dist",
+    "installCommand": "npm install && cd swiftree/apps/landing && npm install"
   }
-  
