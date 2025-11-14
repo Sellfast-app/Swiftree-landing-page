@@ -1,20 +1,7 @@
 {
-    "projects": [
-      {
-        "rootDirectory": "swiftree/apps/landing",
-        "outputDirectory": "dist",
-        "buildCommand": "npm install && npm run build",
-        "rewrites": [
-          { "source": "/", "destination": "/index.html" }
-        ]
-      },
-      {
-        "rootDirectory": "swiftree/apps/storefront",
-        "buildCommand": "npm install && npm run build",
-        "rewrites": [
-          { "source": "/storefront/:path*", "destination": "/:path*" }
-        ]
-      }
+    "rewrites": [
+      { "source": "/storefront/:path*", "destination": "/swiftree/apps/storefront/:path*" },
+      { "source": "/:path*", "destination": "/swiftree/apps/landing/:path*" }
     ]
   }
   
