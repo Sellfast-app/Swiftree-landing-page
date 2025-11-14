@@ -11,8 +11,8 @@
       }
     ],
     "rewrites": [
-      { "source": "/storefront/:path*", "destination": "/apps/storefront/:path*" },
-      { "source": "/:path*", "destination": "/apps/landing/dist/:path*" }
+      { "source": "/storefront/:path*", "destination": "/swiftree/apps/storefront/:path*" },
+      { "source": "/:path*", "destination": "/swiftree/apps/landing/dist/:path*" }
     ]
   }
   
