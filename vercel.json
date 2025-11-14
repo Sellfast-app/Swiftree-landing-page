@@ -1,19 +1,16 @@
 {
-    "buildCommand": "npm run build:landing",
-    "outputDirectory": "swiftree/apps/landing/dist",
-    "installCommand": "npm install && cd swiftree/apps/landing && npm install",
-    "rewrites": [
-      {
-        "source": "/storefront/:path*",
-        "destination": "https://storefront-jade-nu.vercel.app/storefront/:path*"
-      },
-      {
-        "source": "/storefront",
-        "destination": "https://storefront-jade-nu.vercel.app/storefront"
-      },
-      {
-        "source": "/(.*)",
-        "destination": "/index.html"
-      }
-    ]
-  }
+  "rewrites": [
+    {
+      "source": "/storefront/:path*",
+      "destination": "https://storefront-jade-nu.vercel.app/storefront/:path*"
+    },
+    {
+      "source": "/storefront",
+      "destination": "https://storefront-jade-nu.vercel.app/storefront"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
