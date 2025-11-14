@@ -1,16 +1,8 @@
 {
-  "rewrites": [
-    {
-      "source": "/storefront/:path*",
-      "destination": "https://storefront-jade-nu.vercel.app/:path*"
-    },
-    {
-      "source": "/storefront",
-      "destination": "https://storefront-jade-nu.vercel.app"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
-}
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }
+    ]
+  }
