@@ -10,9 +10,9 @@
         "use": "@vercel/next"
       }
     ],
-    "rewrites": [
-      { "source": "/storefront/:path*", "destination": "/swiftree/apps/storefront/:path*" },
-      { "source": "/:path*", "destination": "/swiftree/apps/landing/dist/:path*" }
+    "routes": [
+      { "src": "/storefront/(.*)", "dest": "/storefront/$1" },
+      { "src": "/(.*)", "dest": "/index.html" }
     ]
   }
   
