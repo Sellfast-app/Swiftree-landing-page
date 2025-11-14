@@ -5,7 +5,11 @@
     "rewrites": [
       {
         "source": "/storefront/:path*",
-        "destination": "https://storefront-jade-nu.vercel.app//:path*"
+        "destination": "https://storefront-jade-nu.vercel.app/storefront/:path*"
+      },
+      {
+        "source": "/storefront",
+        "destination": "https://storefront-jade-nu.vercel.app/storefront"
       },
       {
         "source": "/(.*)",
