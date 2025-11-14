@@ -12,7 +12,7 @@
     ],
     "rewrites": [
       { "source": "/storefront/:path*", "destination": "/apps/storefront/:path*" },
-      { "source": "/:path*", "destination": "/apps/landing/:path*" }
+      { "source": "/:path*", "destination": "/apps/landing/dist/:path*" }
     ]
   }
   
