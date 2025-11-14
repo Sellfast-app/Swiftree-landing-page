@@ -1,7 +1,18 @@
 {
+    "builds": [
+      {
+        "src": "swiftree/apps/landing/package.json",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "dist" }
+      },
+      {
+        "src": "swiftree/apps/storefront/package.json",
+        "use": "@vercel/next"
+      }
+    ],
     "rewrites": [
-      { "source": "/storefront/:path*", "destination": "/swiftree/apps/storefront/:path*" },
-      { "source": "/:path*", "destination": "/swiftree/apps/landing/:path*" }
+      { "source": "/storefront/:path*", "destination": "/apps/storefront/:path*" },
+      { "source": "/:path*", "destination": "/apps/landing/:path*" }
     ]
   }
   

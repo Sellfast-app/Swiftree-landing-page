@@ -2,12 +2,12 @@
   "name": "fast-green-commerce-hub-main",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:landing": "cd swiftree/apps/landing && npm install && npm run build",
-    "build:storefront": "cd swiftree/apps/storefront && npm install && npm run build",
-    "build": "npm run build:landing && npm run build:storefront"
-  },
+"scripts": {
+  "build:landing": "cd swiftree/apps/landing && npm run build",
+  "build:storefront": "cd swiftree/apps/storefront && npm run build",
+  "build": "npm run build:landing && npm run build:storefront"
+}
+,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sellfast-app/Swiftree-landing-page.git"
