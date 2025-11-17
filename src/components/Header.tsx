@@ -160,7 +160,6 @@ const Header = () => {
                 <Button variant="ghost" className="w-full justify-start hover:bg-green-light/50" asChild>
                   <a 
                     href="vendor.swiftree.app/login" 
-                    target="_blank" 
                     rel="noopener noreferrer"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -170,7 +169,6 @@ const Header = () => {
                 <Button className="w-full bg-gradient-primary hover:opacity-90 transition-opacity" asChild>
                   <a 
                     href="vendor.swiftree.app/signup" 
-                    target="_blank" 
                     rel="noopener noreferrer"
                     onClick={() => setIsMenuOpen(false)}
                   >
