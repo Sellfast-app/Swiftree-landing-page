@@ -90,12 +90,12 @@ const Header = () => {
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="ghost" className="hover:bg-green-light/50" asChild>
-              <a href="vendor.swiftree.app/login" target="_blank" rel="noopener noreferrer">
+              <a href="https://vendor.swiftree.app/login" target="_blank" rel="noopener noreferrer">
                 Login
               </a>
             </Button>
             <Button className="bg-gradient-primary hover:opacity-90 transition-opacity" asChild>
-              <a href="vendor.swiftree.app/signup" target="_blank" rel="noopener noreferrer">
+              <a href="https://vendor.swiftree.app/signup" target="_blank" rel="noopener noreferrer">
                 Start Free Trial
               </a>
             </Button>
@@ -159,7 +159,8 @@ const Header = () => {
               <div className="px-3 py-2 space-y-2">
                 <Button variant="ghost" className="w-full justify-start hover:bg-green-light/50" asChild>
                   <a 
-                    href="vendor.swiftree.app/login" 
+                    href="https://vendor.swiftree.app/login" 
+                    target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -168,7 +169,8 @@ const Header = () => {
                 </Button>
                 <Button className="w-full bg-gradient-primary hover:opacity-90 transition-opacity" asChild>
                   <a 
-                    href="vendor.swiftree.app/signup" 
+                    href="https://vendor.swiftree.app/signup" 
+                    target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMenuOpen(false)}
                   >
