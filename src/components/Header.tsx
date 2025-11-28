@@ -85,6 +85,9 @@ const Header = () => {
             <a href="/about" className="text-foreground hover:text-green-primary transition-colors">
               About
             </a>
+            <a href="/privacy" className="text-foreground hover:text-green-primary transition-colors">
+              Privacy
+            </a>
           </nav>
 
           {/* Auth Buttons */}
@@ -145,6 +148,13 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
+              </a>
+              <a
+                href="/privacy"
+                className="block px-3 py-2 text-base font-medium text-foreground hover:text-green-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Privacy
               </a>
               <div className="px-3 py-2">
                 <div className="text-base font-medium text-foreground mb-2">Pricing</div>
