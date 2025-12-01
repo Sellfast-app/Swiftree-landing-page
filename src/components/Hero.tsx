@@ -62,20 +62,7 @@ const Hero = () => {
 
         {/* Hero Image */}
         <div className="relative max-w-6xl mx-auto animate-float">
-          <div className="relative bg-gradient-to-br from-green-light/20 to-green-medium/20 rounded-2xl p-8 border border-green-light/30 shadow-glow">
-            <img 
-              src="/api/placeholder/1200/800" 
-              alt="Swiftree Dashboard" 
-              className="w-full h-auto rounded-xl shadow-2xl"
-            />
-            {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 bg-green-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-float">
-              ✅ WhatsApp Ready
-            </div>
-            <div className="absolute -bottom-4 -left-4 bg-background text-foreground px-4 py-2 rounded-full text-sm font-medium shadow-lg border border-green-light/30 animate-float">
-              🇳🇬 Made for Nigeria
-            </div>
-          </div>
+         
         </div>
       </div>
     </section>
