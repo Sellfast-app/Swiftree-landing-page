@@ -35,9 +35,9 @@ const Footer = () => {
             <ul className="space-y-2 text-green-light">
               <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">WhatsApp Integration</a></li>
+              {/* <li><a href="#" className="hover:text-white transition-colors">WhatsApp Integration</a></li> */}
               <li><a href="#" className="hover:text-white transition-colors">Custom Storefront</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Analytics</a></li>
+              {/* <li><a href="#" className="hover:text-white transition-colors">Analytics</a></li> */}
             </ul>
           </div>
 
@@ -58,7 +58,7 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Support</h3>
             <ul className="space-y-2 text-green-light">
               <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">API Documentation</a></li>
+              {/* <li><a href="#" className="hover:text-white transition-colors">API Documentation</a></li> */}
               <li><a href="#" className="hover:text-white transition-colors">Tutorials</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Community</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Status</a></li>

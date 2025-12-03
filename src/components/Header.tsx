@@ -16,8 +16,8 @@ const Header = () => {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "Free for 2 months",
-      description: "Professional features for 2 months",
+      price: "Free for 1 month",
+      description: "Professional features for 1 month",
       features: ["WhatsApp Integration", "Product Catalog", "Order Management", "Basic Analytics"]
     },
     {
