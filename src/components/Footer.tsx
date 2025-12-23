@@ -46,7 +46,7 @@ const Footer = () => {
           <div className="order-2  flex justify-center lg:justify-end">
             <div className="relative w-full max-w-sm lg:max-w-md">
               <img
-                src="/public/footer-phone.png"
+                src="/footer-phone.png"
                 alt="Swiftree Mobile App"
                 className="w-full h-auto object-contain"
               />

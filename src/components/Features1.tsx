@@ -26,7 +26,7 @@ const Features1 = () => {
             icon: <Product />,
             title: "Smart Product Catalog",
             description: "Create beautiful product catalogs that work perfectly on mobile devices for your Nigerian customers.",
-            image: "/public/Frame 1000001967.png",
+            image: "/Frame 1000001967.png",
             bg: "bg-[#FFF4E6]",
             border: "border-[#F8E0BE]",
             text: "text-[#FF8F2E]",
@@ -38,7 +38,7 @@ const Features1 = () => {
             icon: <Business />,
             title: "Business Analytics",
             description: "Track your sales, understand your customers, and grow your business with powerful insights.",
-            image: "/public/Group 2631.png",
+            image: "/Group 2631.png",
             bg: "bg-[#EBF8FF]",
             border: "border-[#BCE6FF]",
             text: "text-[#06A4FF]",
@@ -90,7 +90,7 @@ const Features1 = () => {
                                 <span className="text-[#95C2A3] text-sm">Seamlessly connect with customers through WhatsApp Business, Nigeria's most popular messaging platform.</span>
                             </div>
                             <div className="w-full md:w-[50%]">
-                                <img src="/public/Group3.png" alt="" className="" />
+                                <img src="/Group3.png" alt="" className="" />
                             </div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
