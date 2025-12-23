@@ -39,7 +39,7 @@ const About = () => {
         },
         {
             icon: <PPhone/>,
-            color: "bg-green-500",
+            color: "bg-purple-500",
             textColor: "text-[#9359F1]",
             title: "Paddy Wey No Dey Fall Hand",
             description: "With us, you'll experience ZERO downtime, enjoy smooth business management and automation, 24/7 awesome customer service, secure payments and deliveries."
@@ -100,7 +100,7 @@ const About = () => {
         {
             name: "Femi Olatunji",
             nameColor: "text-[#123D00]",
-            roleStyle: "bg-[#E9FBE1#123D00] text-[#123D00] border-[#123D00]",
+            roleStyle: "bg-[#E9FBE1] text-[#123D00] border-[#123D00]",
             role: "Founding Operations Manager, Swiftree",
             image: "/Femi.png",
             linkedin: "www.linkedin.com/in/femimisi",
@@ -225,17 +225,17 @@ const About = () => {
                         <div 
                             className="flex transition-transform duration-500 ease-out"
                             style={{ 
-                                transform: `translateX(-${currentSlide * (100 / 3)}%)`,
+                                transform: `translateX(-${currentSlide * (100 / (window.innerWidth < 768 ? 1 : 3))}%)`,
                                 transition: isTransitioning ? 'transform 500ms ease-out' : 'none'
                             }}
                         >
                             {infiniteItems.map((reason, index) => (
                                 <div 
                                     key={`${reason.title}-${index}`}
-                                    className="flex-shrink-0 w-1/3 px-3"
+                                    className="flex-shrink-0 w-full md:w-1/3 px-3"
                                 >
                                     <Card className="h-full transition-all duration-300 bg-white shadow-sm hover:shadow-lg rounded-2xl hover:-translate-y-1">
-                                        <CardContent className="pt-6">
+                                        <CardContent className="pt-6 px-4 sm:px-6">
                                             <div className="flex gap-3 items-center mb-4">
                                                 <div className={`${reason.color} w-12 h-12 rounded-full flex items-center justify-center text-white`}>
                                                     {reason.icon}
