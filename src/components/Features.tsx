@@ -34,25 +34,25 @@ const Features = () => {
       number: "01",
       title: "Store Setup",
       description: "Start onboarding in a few simple steps, provide your account, business info, WhatsApp setup and customization preferences",
-      image: "/public/iPhone1.png"
+      image: "/iPhone1.png"
     },
     {
       number: "02",
       title: "Add Products",
       description: "Populate your storefront and start selling by adding products to your store",
-      image: "/public/iPhone2.png"
+      image: "/iPhone2.png"
     },
     {
       number: "03",
       title: "Live Preview",
       description: "Your storefront is now ready to go live, capable of accepting orders, payments, payouts etc. All in one place.",
-      image: "/public/iPhone3.png"
+      image: "/iPhone3.png"
     },
     {
       number: "04",
       title: "QR code & Links",
       description: "Now your storefront is all set up, you'll have access to a customized QR code and shareable links to your store that you can share with anyone.",
-      image: "/public/iPhone4.png"
+      image: "/iPhone4.png"
     }
   ];
 
@@ -168,7 +168,7 @@ const Features = () => {
             </Swiper>
           </div>
           <div className="mt-4">
-            <img src="/public/Group.png" alt="Partners Shadow" className="mt-2 mx-auto" />
+            <img src="/Group.png" alt="Partners Shadow" className="mt-2 mx-auto" />
           </div>
         </div>
       </div>
