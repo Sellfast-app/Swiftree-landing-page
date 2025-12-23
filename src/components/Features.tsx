@@ -68,12 +68,12 @@ const Features = () => {
   const partners = [
     { name: "PAYSTACK", logo: <Paystack />, description: "Trusted partner for payments" },
     { name: "SENDBOX", logo: <Sendbox />, description: "Trusted partner for delivery" },
-    { name: "GOOGLE", logo: <Google />, description: "Trusted partner for delivery" },
+    { name: "GOOGLE", logo: <Google />, description: "Backed by google for operations" },
     { name: "RCCG", logo: <Rccg />, description: "Top vendor on Swiftree" },
     // Add more partners for better sliding effect
     { name: "PAYSTACK", logo: <Paystack />, description: "Trusted partner for payments" },
     { name: "SENDBOX", logo: <Sendbox />, description: "Trusted partner for delivery" },
-    { name: "GOOGLE", logo: <Google />, description: "Trusted partner for delivery" },
+    { name: "GOOGLE", logo: <Google />, description: "Backed by google for operations" },
     { name: "RCCG", logo: <Rccg />, description: "Top vendor on Swiftree" },
   ]
 

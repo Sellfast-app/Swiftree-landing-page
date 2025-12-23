@@ -45,7 +45,7 @@ const PricingPlans = () => {
         ]
       },
       professional: {
-        price: "₦13,500",
+        price: "₦15,000",
         billing: "Billed quarterly. Save ₦1,500 (10% off)",
         savings: "10",
         features: [
@@ -71,7 +71,7 @@ const PricingPlans = () => {
         ]
       },
       professional: {
-        price: "₦25,500",
+        price: "₦20,000",
         billing: "Billed biannually. Save ₦4,500 (15% off)",
         savings: "15",
         features: [
@@ -97,7 +97,7 @@ const PricingPlans = () => {
         ]
       },
       professional: {
-        price: "₦48,000",
+        price: "₦60,000",
         billing: "Billed yearly. Save ₦12,000 (20% off)",
         savings: "20",
         features: [

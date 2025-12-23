@@ -338,10 +338,6 @@ const About = () => {
                                     <h4 className="font-bold text-gray-900 mb-3">Experience</h4>
                                     <p className="text-gray-700 leading-relaxed text-sm">{teamMembers[teamSlide].experience}</p>
                                 </div>
-                                <div className=" p-4 rounded-lg">
-                                    <h4 className="font-bold text-gray-900 mb-3">Vision</h4>
-                                    <p className="text-gray-700 leading-relaxed text-sm">{teamMembers[teamSlide].vision}</p>
-                                </div>
                             </div>
                         </div>
 
