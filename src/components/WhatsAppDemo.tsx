@@ -13,35 +13,35 @@ const WhatsAppDemo = () => {
       icon: <MessageCircle className="h-5 w-5" />,
       title: "Customer Inquiry",
       description: "Customer initiates conversation with your business",
-      image: "/public/whatsapp1.png"
+      image: "/whatsapp1.png"
     },
     {
       number: "02",
       icon: <ShoppingCart className="h-5 w-5" />,
       title: "Product Catalog",
       description: "Business responds with interactive product catalog",
-      image: "/public/whatsapp2.png"
+      image: "/whatsapp2.png"
     },
     {
       number: "03",
       icon: <CreditCard className="h-5 w-5" />,
       title: "Payment",
       description: "Secure payment processing within WhatsApp",
-      image: "/public/whatsapp3.png"
+      image: "/whatsapp3.png"
     },
     {
       number: "04",
       icon: <CheckCircle className="h-5 w-5" />,
       title: "Receipt",
       description: "Instant receipt generation and confirmation",
-      image: "/public/whatsapp4.png"
+      image: "/whatsapp4.png"
     },
     {
       number: "05",
       icon: <Truck className="h-5 w-5" />,
       title: "Delivery",
       description: "Delivery tracking link shared automatically",
-      image: "/public/whatsapp5.png"
+      image: "/whatsapp5.png"
     }
   ];
 
