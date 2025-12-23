@@ -4,16 +4,78 @@ import { MessageCircle, ShoppingCart, BarChart3, Smartphone, Zap, Shield } from 
 import nigerianBusinessOwner1 from "@/assets/nigerian-business-owner-1.jpg";
 import nigerianBusinessOwner2 from "@/assets/nigerian-business-owner-2.jpg";
 import nigerianMarketplace from "@/assets/nigerian-marketplace.jpg";
+import LocalSales from "./svgIcons/Localsales";
+import GlobalSales from "./svgIcons/GlobalSales";
+import OnlineSales from "./svgIcons/OnlineSales";
+import OfflineSales from "./svgIcons/OfflineSales";
+import DirectSales from "./svgIcons/DirectSales";
+import Wholesale from "./svgIcons/Wholesale";
+import OrderManagement from "./svgIcons/OrderManagement";
+import { QrCode, Link, Share2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import Paystack from "./svgIcons/Paystack";
+import Sendbox from "./svgIcons/Sendbox";
+import Google from "./svgIcons/Google";
+import Rccg from "./svgIcons/Rccg";
+
+// Import Swiper
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
 
 const Features = () => {
-  const platforms = [
-    { name: "Local Sales", icon: "🏪" },
-    { name: "Global Sales", icon: "🌍" },
-    { name: "Online Sales", icon: "💻" },
-    { name: "Offline Sales", icon: "🏬" },
-    { name: "Direct Sales", icon: "👥" },
-    { name: "Wholesale", icon: "📦" }
+  const [activePhase, setActivePhase] = useState(0);
+
+  const phases = [
+    {
+      number: "01",
+      title: "Store Setup",
+      description: "Start onboarding in a few simple steps, provide your account, business info, WhatsApp setup and customization preferences",
+      image: "/public/iPhone1.png"
+    },
+    {
+      number: "02",
+      title: "Add Products",
+      description: "Populate your storefront and start selling by adding products to your store",
+      image: "/public/iPhone2.png"
+    },
+    {
+      number: "03",
+      title: "Live Preview",
+      description: "Your storefront is now ready to go live, capable of accepting orders, payments, payouts etc. All in one place.",
+      image: "/public/iPhone3.png"
+    },
+    {
+      number: "04",
+      title: "QR code & Links",
+      description: "Now your storefront is all set up, you'll have access to a customized QR code and shareable links to your store that you can share with anyone.",
+      image: "/public/iPhone4.png"
+    }
   ];
+
+  const platforms = [
+    { name: "Local Sales", icon: <LocalSales /> },
+    { name: "Global Sales", icon: <GlobalSales /> },
+    { name: "Online Sales", icon: <OnlineSales /> },
+    { name: "Offline Sales", icon: <OfflineSales /> },
+    { name: "Direct Sales", icon: <DirectSales /> },
+    { name: "Wholesale", icon: <Wholesale /> },
+  ];
+
+  const partners = [
+    { name: "PAYSTACK", logo: <Paystack />, description: "Trusted partner for payments" },
+    { name: "SENDBOX", logo: <Sendbox />, description: "Trusted partner for delivery" },
+    { name: "GOOGLE", logo: <Google />, description: "Trusted partner for delivery" },
+    { name: "RCCG", logo: <Rccg />, description: "Top vendor on Swiftree" },
+    // Add more partners for better sliding effect
+    { name: "PAYSTACK", logo: <Paystack />, description: "Trusted partner for payments" },
+    { name: "SENDBOX", logo: <Sendbox />, description: "Trusted partner for delivery" },
+    { name: "GOOGLE", logo: <Google />, description: "Trusted partner for delivery" },
+    { name: "RCCG", logo: <Rccg />, description: "Top vendor on Swiftree" },
+  ]
 
   const features = [
     {
@@ -57,85 +119,56 @@ const Features = () => {
     }
   ];
 
+  const progressPercentage = ((activePhase + 1) / phases.length) * 100;
+
   return (
-    <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+    <section  className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="container mx-auto">
         {/* Platform Coverage */}
-        <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4 bg-green-light/50 text-green-dark">
-            One Platform to Power All
-          </Badge>
+        <div className="text-center ">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-4xl mx-auto">
             {platforms.map((platform, index) => (
-              <div key={index} className="text-center p-4 bg-card rounded-lg border border-green-light/30 hover:shadow-elegant transition-all duration-300 hover:scale-105">
-                <div className="text-2xl mb-2">{platform.icon}</div>
+              <div key={index} className="flex items-center gap-1 py-1 px-2 w-fit bg-card rounded-lg border border-green-light/30 hover:shadow-elegant transition-all duration-300 hover:scale-105">
+                <div className="">{platform.icon}</div>
                 <div className="text-sm font-medium text-foreground">{platform.name}</div>
               </div>
             ))}
           </div>
-        </div>
 
-        {/* Main Features */}
-        <div className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
-            Why Nigerian Businesses Choose Swiftree
-          </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="border-green-light/30 hover:shadow-elegant transition-all duration-300 hover:scale-105 bg-card">
-                <CardHeader>
-                  <div className="mb-4">
-                    {feature.icon}
+          {/* Partners Section with Swiper */}
+          <div className="mt-8 max-w-4xl mx-auto px-4">
+            <Swiper
+              slidesPerView="auto" // Changed to auto for fixed width
+              spaceBetween={16}
+              className="partnersSwiper"
+              modules={[Autoplay]}
+              autoplay={{
+                delay: 1000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+              }}
+              speed={800}
+              centeredSlides={false}
+              loop={true}
+            >
+              {partners.map((partner, index) => (
+                <SwiperSlide
+                  key={index}
+                  className="!w-[280px] sm:!w-[280px] md:!w-[280px]" // Fixed width for all screens
+                >
+                  <div className="flex items-center gap-3 py-3 px-4 bg-card rounded-lg border border-green-light/30 hover:shadow-elegant transition-all duration-300 hover:scale-105 h-full w-full">
+                    <div className="flex-shrink-0">{partner.logo}</div>
+                    <div className="flex flex-col font-medium text-foreground min-w-0 flex-1">
+                      <h3 className="text-sm text-start font-medium truncate">{partner.name}</h3>
+                      <span className="text-xs text-start text-gray-500 truncate">{partner.description}</span>
+                    </div>
                   </div>
-                  <CardTitle className="text-xl text-foreground">{feature.title}</CardTitle>
-                  <CardDescription className="text-muted-foreground">{feature.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="relative overflow-hidden rounded-lg">
-                    <img 
-                      src={feature.image} 
-                      alt={feature.title}
-                      className="w-full h-48 object-cover hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
-        </div>
-
-        {/* Target Audience */}
-        <div>
-          <div className="text-center mb-12">
-            <Badge variant="secondary" className="mb-4 bg-green-light/50 text-green-dark">
-              Swiftree is built for every business
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Built for Nigerian SMEs
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {targetAudience.map((audience, index) => (
-              <Card key={index} className="border-green-light/30 hover:shadow-elegant transition-all duration-300 bg-card">
-                <CardHeader className="text-center">
-                  <div className="mx-auto mb-4 p-4 bg-green-light/20 rounded-full w-fit">
-                    {audience.icon}
-                  </div>
-                  <CardTitle className="text-xl text-foreground">{audience.title}</CardTitle>
-                  <CardDescription className="text-muted-foreground">{audience.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {audience.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                        <div className="w-2 h-2 bg-green-primary rounded-full mr-3"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="mt-4">
+            <img src="/public/Group.png" alt="Partners Shadow" className="mt-2 mx-auto" />
           </div>
         </div>
       </div>

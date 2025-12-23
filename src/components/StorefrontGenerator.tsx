@@ -120,15 +120,13 @@ const StorefrontGenerator = () => {
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <Badge variant="secondary" className="mb-4 bg-green-light/50 text-green-dark">
-            Free Storefront Generator
-          </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Create Your Nigerian Storefront in Minutes
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-1">
+            Create Your Business Storefront
           </h2>
+          <span className="text-3xl md:text-4xl font-bold text-white bg-[#F7CE45] px-1 mb-4"> in Minutes</span>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             No coding required. Generate a beautiful, WhatsApp-integrated storefront 
             tailored for the Nigerian market.
@@ -376,18 +374,6 @@ const StorefrontGenerator = () => {
                     </div>
                   </div>
                 ))}
-              </CardContent>
-            </Card>
-
-            <Card className="border-green-light/30 bg-gradient-primary text-white">
-              <CardContent className="p-6 text-center">
-                <h3 className="font-bold text-lg mb-2">Ready to Start?</h3>
-                <p className="text-sm opacity-90 mb-4">
-                  Join 5,000+ Nigerian businesses already using Swiftree
-                </p>
-                <Button variant="secondary" className="w-full">
-                  Get Professional Plan
-                </Button>
               </CardContent>
             </Card>
           </div>

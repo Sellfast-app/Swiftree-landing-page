@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,6 +13,27 @@ import {
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isPricingOpen, setIsPricingOpen] = useState(false);
+  const location = useLocation();
+  
+  // Check if we're on the about page
+  const isAboutPage = location.pathname === "/about";
+  
+  // Text color classes based on page
+  const textColorClass = isAboutPage 
+    ? "text-gray-900"  // Dark text for about page
+    : "text-white [text-shadow:_0_1px_2px_rgb(0_0_0_/_40%)]";  // White text with shadow for other pages
+  
+  const hoverColorClass = isAboutPage 
+    ? "hover:text-green-600"  // Green hover for about page
+    : "hover:text-green-primary";  // Default green hover
+  
+  const buttonTextColor = isAboutPage 
+    ? "text-gray-900 hover:bg-gray-100"  // Dark text, light hover for about page
+    : "text-white hover:bg-green-light/50";  // White text for other pages
+  
+  const mobileTextColorClass = isAboutPage 
+    ? "text-gray-900 hover:text-green-600"  // Dark text for mobile on about page
+    : "text-foreground hover:text-green-primary";  // Default for other pages
 
   const pricingPlans = [
     {
@@ -29,168 +51,151 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-green-light/20 z-50">
+    <header className={`fixed top-0 w-full bg-transparent backdrop-blur-md z-50 ${isAboutPage ? '' : ''}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/logo.png" 
+          <div className="flex items-center gap-4">
+            <a href="/"> <img 
+              src={isAboutPage ? "/lovable-uploads/logo1.png" : "/lovable-uploads/logo.png"} 
               alt="Swiftree" 
-              className="h-8 w-auto"
-            />
+              className={`h-8 w-auto ${isAboutPage ? '' : 'drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]'}`}
+            />  </a>
+           
+            
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-8">
+            <a 
+                href="#pricing" 
+                className={`${textColorClass} ${hoverColorClass} transition-colors`}
+              >
+                Pricing
+              </a>
+              
+              <a 
+                href="#features" 
+                className={`${textColorClass} ${hoverColorClass} transition-colors`}
+              >
+                Features
+              </a>
+              <a 
+                href="/about" 
+                className={`${textColorClass} ${hoverColorClass} transition-colors ${isAboutPage ? 'font-semibold text-green-600' : ''}`}
+              >
+                About
+              </a>
+              <a 
+                href="/privacy" 
+                className={`${textColorClass} ${hoverColorClass} transition-colors`}
+              >
+                Privacy
+              </a>
+            </nav>
           </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger 
-                    className="bg-transparent hover:bg-green-light/50"
-                    onClick={() => setIsPricingOpen(!isPricingOpen)}
-                  >
-                    Pricing
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-card border border-green-light/20">
-                    <div className="grid gap-3 p-6 w-[400px]">
-                      {pricingPlans.map((plan) => (
-                        <div key={plan.name} className="group select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-green-light/50">
-                          <div className="text-sm font-medium leading-none">{plan.name}</div>
-                          <div className="text-sm font-bold text-green-primary">{plan.price}</div>
-                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                            {plan.description}
-                          </p>
-                          <ul className="text-xs text-muted-foreground mt-2">
-                            {plan.features.map((feature, index) => (
-                              <li key={index}>• {feature}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-            <a href="#features" className="text-foreground hover:text-green-primary transition-colors">
-              Features
-            </a>
-            <a href="#testimonials" className="text-foreground hover:text-green-primary transition-colors">
-              Testimonials
-            </a>
-            <a href="#contact" className="text-foreground hover:text-green-primary transition-colors">
-              Contact
-            </a>
-            <a href="/about" className="text-foreground hover:text-green-primary transition-colors">
-              About
-            </a>
-            <a href="/privacy" className="text-foreground hover:text-green-primary transition-colors">
-              Privacy
-            </a>
-          </nav>
-
+    
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="hover:bg-green-light/50" asChild>
+            <Button 
+              variant="ghost" 
+              className={`${buttonTextColor} transition-colors ${isAboutPage ? 'shadow-none' : ''}`}
+              asChild
+            >
               <a href="https://vendor.swiftree.app/login" target="_blank" rel="noopener noreferrer">
                 Login
               </a>
             </Button>
-            <Button className="bg-gradient-primary hover:opacity-90 transition-opacity" asChild>
-              <a href="https://vendor.swiftree.app/signup" target="_blank" rel="noopener noreferrer">
-                Start Free Trial
-              </a>
-            </Button>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="hover:bg-green-light/50"
+            <Button 
+              className={`bg-[#206730] hover:opacity-90 transition-opacity ${isAboutPage ? 'shadow-none' : 'shadow-lg'}`}
+              asChild
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              <a href="https://vendor.swiftree.app/signup" target="_blank" rel="noopener noreferrer">
+                Start Free Trial <ArrowRight className="ml-2 h-4 w-4" />
+              </a> 
             </Button>
           </div>
+             {/* Mobile menu button */}
+             <div className="md:hidden">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className={isAboutPage ? "hover:bg-gray-100 shadow-none" : "hover:bg-green-light/50"}
+              >
+                {isMenuOpen ? (
+                  <X className={`h-6 w-6 ${isAboutPage ? 'text-gray-900' : 'text-white'}`} />
+                ) : (
+                  <Menu className={`h-6 w-6 ${isAboutPage ? 'text-gray-900' : 'text-white'}`} />
+                )}
+              </Button>
+            </div>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-green-light/20">
-              <a
-                href="#features"
-                className="block px-3 py-2 text-base font-medium text-foreground hover:text-green-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Features
-              </a>
-              <a
-                href="#testimonials"
-                className="block px-3 py-2 text-base font-medium text-foreground hover:text-green-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Testimonials
-              </a>
-              <a
-                href="#contact"
-                className="block px-3 py-2 text-base font-medium text-foreground hover:text-green-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
-              </a>
-              <a
-                href="/about"
-                className="block px-3 py-2 text-base font-medium text-foreground hover:text-green-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About
-              </a>
-              <a
-                href="/privacy"
-                className="block px-3 py-2 text-base font-medium text-foreground hover:text-green-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Privacy
-              </a>
-              <div className="px-3 py-2">
-                <div className="text-base font-medium text-foreground mb-2">Pricing</div>
-                {pricingPlans.map((plan) => (
-                  <div key={plan.name} className="ml-4 mb-3 p-3 bg-green-light/20 rounded-lg">
-                    <div className="font-medium">{plan.name}</div>
-                    <div className="text-sm font-bold text-green-primary">{plan.price}</div>
-                    <div className="text-sm text-muted-foreground">{plan.description}</div>
-                  </div>
-                ))}
-              </div>
-              <div className="px-3 py-2 space-y-2">
-                <Button variant="ghost" className="w-full justify-start hover:bg-green-light/50" asChild>
-                  <a 
-                    href="https://vendor.swiftree.app/login" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsMenuOpen(false)}
+         {/* Mobile Navigation */}
+         {isMenuOpen && (
+            <div className="md:hidden">
+              <div className={`px-2 pt-2 pb-3 space-y-1 ${isAboutPage ? 'bg-white' : 'bg-background'} border-t ${isAboutPage ? 'border-gray-200' : 'border-green-light/20'}`}>
+                <a
+                  href="#features"
+                  className={`block px-3 py-2 text-base font-medium ${mobileTextColorClass} transition-colors`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Features
+                </a>
+                <a
+                  href="/about"
+                  className={`block px-3 py-2 text-base font-medium ${mobileTextColorClass} transition-colors ${isAboutPage ? 'font-semibold text-green-600' : ''}`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  About
+                </a>
+                <a
+                  href="/privacy"
+                  className={`block px-3 py-2 text-base font-medium ${mobileTextColorClass} transition-colors`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Privacy
+                </a>
+                <div className="px-3 py-2">
+                  <div className={`text-base font-medium ${isAboutPage ? 'text-gray-900' : 'text-foreground'} mb-2`}>Pricing</div>
+                  {pricingPlans.map((plan) => (
+                    <div key={plan.name} className={`ml-4 mb-3 p-3 ${isAboutPage ? 'bg-gray-50' : 'bg-green-light/20'} rounded-lg ${isAboutPage ? 'shadow-none' : ''}`}>
+                      <div className={`font-medium ${isAboutPage ? 'text-gray-900' : ''}`}>{plan.name}</div>
+                      <div className="text-sm font-bold text-green-primary">{plan.price}</div>
+                      <div className={`text-sm ${isAboutPage ? 'text-gray-700' : 'text-muted-foreground'}`}>{plan.description}</div>
+                    </div>
+                  ))}
+                </div>
+                <div className="px-3 py-2 space-y-2">
+                  <Button 
+                    variant="ghost" 
+                    className={`w-full justify-start ${isAboutPage ? 'text-gray-900 hover:bg-gray-100 shadow-none' : 'hover:bg-green-light/50'}`} 
+                    asChild
                   >
-                    Login
-                  </a>
-                </Button>
-                <Button className="w-full bg-gradient-primary hover:opacity-90 transition-opacity" asChild>
-                  <a 
-                    href="https://vendor.swiftree.app/signup" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsMenuOpen(false)}
+                    <a 
+                      href="https://vendor.swiftree.app/login" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Login
+                    </a>
+                  </Button>
+                  <Button 
+                    className={`w-full bg-[#206730] hover:opacity-90 transition-opacity ${isAboutPage ? 'shadow-none' : ''}`} 
+                    asChild
                   >
-                    Start Free Trial
-                  </a>
-                </Button>
+                    <a 
+                      href="https://vendor.swiftree.app/signup" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Start Free Trial
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
       </div>
     </header>
   );

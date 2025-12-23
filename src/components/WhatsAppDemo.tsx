@@ -3,232 +3,131 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MessageCircle, ShoppingCart, CreditCard, Truck, CheckCircle } from "lucide-react";
-import iphoneWhatsappMockup from "@/assets/iphone-whatsapp-mockup.jpg";
 
 const WhatsAppDemo = () => {
   const [currentStep, setCurrentStep] = useState(0);
 
   const chatSteps = [
     {
+      number: "01",
       icon: <MessageCircle className="h-5 w-5" />,
       title: "Customer Inquiry",
-      message: "Hello James, what are you buying from us today?",
-      sender: "business",
-      time: "2:30 PM"
+      description: "Customer initiates conversation with your business",
+      image: "/public/whatsapp1.png"
     },
     {
+      number: "02",
       icon: <ShoppingCart className="h-5 w-5" />,
       title: "Product Catalog",
-      message: "Kindly click here to see our product catalogue",
-      sender: "business",
-      time: "2:31 PM",
-      hasButton: true,
-      buttonText: "View Catalog 📱"
+      description: "Business responds with interactive product catalog",
+      image: "/public/whatsapp2.png"
     },
     {
-      icon: <ShoppingCart className="h-5 w-5" />,
-      title: "Catalog Display",
-      message: "Product Catalog",
-      sender: "catalog",
-      time: "2:31 PM",
-      isSpecial: true
-    },
-    {
+      number: "03",
       icon: <CreditCard className="h-5 w-5" />,
       title: "Payment",
-      message: "Your order total is ₦15,000. Click to pay securely.",
-      sender: "business",
-      time: "2:35 PM",
-      hasButton: true,
-      buttonText: "Pay Now 💳"
+      description: "Secure payment processing within WhatsApp",
+      image: "/public/whatsapp3.png"
     },
     {
+      number: "04",
       icon: <CheckCircle className="h-5 w-5" />,
       title: "Receipt",
-      message: "Payment successful! Receipt #SF001234",
-      sender: "receipt",
-      time: "2:36 PM",
-      isSpecial: true
+      description: "Instant receipt generation and confirmation",
+      image: "/public/whatsapp4.png"
     },
     {
+      number: "05",
       icon: <Truck className="h-5 w-5" />,
       title: "Delivery",
-      message: "Track your delivery here: swiftree.ng/track/SF001234",
-      sender: "business",
-      time: "2:37 PM",
-      hasButton: true,
-      buttonText: "Track Order 🚚"
+      description: "Delivery tracking link shared automatically",
+      image: "/public/whatsapp5.png"
     }
   ];
 
-  const products = [
-    { name: "Jollof Rice & Chicken", price: "₦3,500", image: "🍚" },
-    { name: "Fried Rice Special", price: "₦4,000", image: "🍛" },
-    { name: "Pepper Soup", price: "₦2,500", image: "🍲" },
-    { name: "Suya Platter", price: "₦5,000", image: "🥩" }
-  ];
-
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-green-light/10">
+    <section className="py-18 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <Badge variant="secondary" className="mb-4 bg-green-light/50 text-green-dark">
-            See It In Action
-          </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Complete Sales Journey on WhatsApp
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+            Complete Sales Journey on{" "}
+            <span className="text-white bg-[#4FCA6A] px-2">WhatsApp</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm text-muted-foreground max-w-2xl mx-auto mt-4">
             From inquiry to delivery, everything happens seamlessly within WhatsApp. 
             No app downloads, no complicated processes.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-          {/* iPhone Mockup */}
-          <div className="relative">
-            <div className="bg-black rounded-[3rem] p-3 shadow-2xl mx-auto max-w-sm">
-              <div className="bg-background rounded-[2.5rem] overflow-hidden">
-                {/* iPhone Status Bar */}
-                <div className="bg-green-primary text-white p-4 flex items-center justify-between text-sm">
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                      <MessageCircle className="h-4 w-4 text-green-primary" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+          {/* Step Controls - Left Side */}
+          <div className="space-y-4 order-1 lg:order-1">
+            {chatSteps.map((step, index) => (
+              <Card 
+                key={index}
+                className={`cursor-pointer transition-all duration-300 rounded-xl ${
+                  index <= currentStep 
+                    ? 'border-[#4FCA6A] bg-[#4FCA6A]/10 shadow-md' 
+                    : 'border-gray-200 bg-white hover:border-[#4FCA6A]/30'
+                }`}
+                onClick={() => setCurrentStep(index)}
+              >
+                <CardContent className="p-4 space-y-5">
+                  <div className="flex items-center gap-4">
+                    {/* Number Circle */}
+                    <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg transition-all duration-300 ${
+                      index <= currentStep
+                        ? 'bg-[#4FCA6A] text-white'
+                        : 'bg-gray-200 text-gray-500'
+                    }`}>
+                      {step.number}
                     </div>
-                    <span className="font-medium">James Food Store</span>
-                  </div>
-                  <div className="text-xs">Online</div>
-                </div>
-
-                {/* Chat Messages */}
-                <div className="h-96 overflow-y-auto p-4 space-y-4 bg-[#e5ddd5]">
-                  {chatSteps.slice(0, currentStep + 1).map((step, index) => (
-                    <div key={index} className="space-y-2">
-                      {step.isSpecial && step.title === "Catalog Display" ? (
-                        <div className="bg-white rounded-lg p-3 shadow-sm max-w-xs ml-auto">
-                          <div className="text-sm font-medium mb-2">Product Catalog</div>
-                          <div className="grid grid-cols-2 gap-2">
-                            {products.map((product, idx) => (
-                              <div key={idx} className="bg-green-light/20 rounded p-2 text-xs">
-                                <div className="text-lg mb-1">{product.image}</div>
-                                <div className="font-medium">{product.name}</div>
-                                <div className="text-green-primary font-bold">{product.price}</div>
-                                <Button size="sm" className="w-full mt-1 text-xs h-6 bg-green-primary">
-                                  Add to Cart
-                                </Button>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      ) : step.isSpecial && step.title === "Receipt" ? (
-                        <div className="bg-white rounded-lg p-3 shadow-sm max-w-xs ml-auto border border-green-primary">
-                          <div className="text-sm font-medium mb-2 text-green-primary">Receipt #SF001234</div>
-                          <div className="text-xs space-y-1">
-                            <div className="flex justify-between">
-                              <span>Jollof Rice & Chicken</span>
-                              <span>₦3,500</span>
-                            </div>
-                            <div className="flex justify-between">
-                              <span>Fried Rice Special</span>
-                              <span>₦4,000</span>
-                            </div>
-                            <div className="flex justify-between">
-                              <span>Suya Platter</span>
-                              <span>₦5,000</span>
-                            </div>
-                            <div className="border-t pt-1 flex justify-between font-bold">
-                              <span>Total</span>
-                              <span>₦12,500</span>
-                            </div>
-                            <div className="text-center text-green-primary font-medium">✅ Payment Successful</div>
-                          </div>
-                        </div>
-                      ) : (
-                        <div className={`flex ${step.sender === 'business' ? 'justify-end' : 'justify-start'}`}>
-                          <div className={`max-w-xs rounded-lg p-3 ${
-                            step.sender === 'business' 
-                              ? 'bg-green-primary text-white ml-auto' 
-                              : 'bg-white text-foreground'
-                          }`}>
-                            <div className="text-sm">{step.message}</div>
-                            {step.hasButton && (
-                              <Button 
-                                size="sm" 
-                                variant="outline" 
-                                className="w-full mt-2 text-xs bg-white text-green-primary border-white hover:bg-green-light/20"
-                              >
-                                {step.buttonText}
-                              </Button>
-                            )}
-                            <div className="text-xs opacity-70 mt-1">{step.time}</div>
-                          </div>
-                        </div>
-                      )}
+                    
+                    {/* Content */}
+                    <div className="flex-1">
+                      <h3 className={`text-base font-bold transition-colors duration-300 ${
+                        index <= currentStep ? 'text-gray-900' : 'text-gray-600'
+                      }`}>
+                        {step.title}
+                      </h3>
                     </div>
-                  ))}
-                </div>
-
-                {/* Chat Input */}
-                <div className="bg-white p-3 flex items-center gap-2">
-                  <div className="flex-1 bg-green-light/20 rounded-full px-3 py-2 text-sm text-muted-foreground">
-                    Type a message...
                   </div>
-                  <Button size="sm" className="rounded-full bg-green-primary">
-                    <MessageCircle className="h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
-            </div>
+                  <p className={`text-sm transition-colors duration-300 ${
+                    index <= currentStep ? 'text-gray-600' : 'text-gray-400'
+                  }`}>
+                    {step.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
 
-          {/* Step Controls */}
-          <div className="space-y-6">
-            <div className="space-y-4">
-              {chatSteps.map((step, index) => (
-                <Card 
-                  key={index}
-                  className={`cursor-pointer transition-all duration-300 ${
-                    index <= currentStep 
-                      ? 'border-green-primary bg-green-light/10' 
-                      : 'border-muted hover:border-green-light'
-                  }`}
-                  onClick={() => setCurrentStep(index)}
+          {/* iPhone Mockup - Right Side */}
+          <div className="order-2 lg:order-2 lg:sticky lg:top-24">
+            <div className="relative max-w-md mx-auto">
+              {/* Restart Button */}
+              <div className="absolute top-2 right-4 z-10">
+                <Button 
+                  onClick={() => setCurrentStep(0)}
+                  size="sm"
+                  className="bg-[#00A5FF] hover:bg-[#0095E8] text-white rounded-lg text-xs font-medium shadow-lg"
                 >
-                  <CardHeader className="pb-2">
-                    <CardTitle className="flex items-center gap-3 text-lg">
-                      <div className={`p-2 rounded-full ${
-                        index <= currentStep ? 'bg-green-primary text-white' : 'bg-muted'
-                      }`}>
-                        {step.icon}
-                      </div>
-                      {step.title}
-                      {index <= currentStep && (
-                        <CheckCircle className="h-5 w-5 text-green-primary ml-auto" />
-                      )}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
-                      {index === 0 && "Customer initiates conversation with your business"}
-                      {index === 1 && "Business responds with interactive product catalog"}
-                      {index === 2 && "Products displayed with add-to-cart functionality"}
-                      {index === 3 && "Secure payment processing within WhatsApp"}
-                      {index === 4 && "Instant receipt generation and confirmation"}
-                      {index === 5 && "Delivery tracking link shared automatically"}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <div className="text-center">
-              <Button 
-                onClick={() => setCurrentStep(0)}
-                variant="outline"
-                className="border-green-primary text-green-primary hover:bg-green-light/20"
-              >
-                Restart Demo
-              </Button>
+                  Restart Demo
+                </Button>
+              </div>
+              
+              {/* Blue Background Card */}
+              <div className="bg-[#E6F6FF] border border-[#06A4FF] rounded-3xl p-6 pt-12 sm:p-8 sm:pt-14 lg:p-10 lg:pt-16 shadow-2xl flex items-end justify-center">
+                {/* Phone Image - Full size, responsive */}
+                <div className="w-full max-w-[250px] sm:max-w-[290px] lg:max-w-[320px]">
+                  <img 
+                    src={chatSteps[currentStep].image} 
+                    alt={chatSteps[currentStep].title}
+                    className="w-full h-auto object-contain transition-opacity duration-500"
+                    key={currentStep}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
