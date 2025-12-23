@@ -122,7 +122,7 @@ const Features = () => {
   const progressPercentage = ((activePhase + 1) / phases.length) * 100;
 
   return (
-    <section  className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+    <section id="partners"  className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="container mx-auto">
         {/* Platform Coverage */}
         <div className="text-center ">
