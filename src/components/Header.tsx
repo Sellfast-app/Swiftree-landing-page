@@ -122,9 +122,9 @@ const Header = () => {
                 className={isAboutPage ? "hover:bg-gray-100 shadow-none" : "hover:bg-green-light/50"}
               >
                 {isMenuOpen ? (
-                  <X className={`h-6 w-6 ${isAboutPage ? 'text-gray-900' : 'text-white'}`} />
+                  <X className={`h-6 w-6 ${isAboutPage ? 'text-gray-900' : 'text-gray-900'}`} />
                 ) : (
-                  <Menu className={`h-6 w-6 ${isAboutPage ? 'text-gray-900' : 'text-white'}`} />
+                  <Menu className={`h-6 w-6 ${isAboutPage ? 'text-gray-900' : 'text-gray-900'}`} />
                 )}
               </Button>
             </div>
