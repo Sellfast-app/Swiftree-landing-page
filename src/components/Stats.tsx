@@ -3,9 +3,9 @@ import { Card, CardContent } from "./ui/card";
 
 function Stats() {
     const stats = [
-        { number: "5,000+", label: "Nigerian Vendors" },
-        { number: "$2M+", label: "Orders Processed" },
-        { number: "$32.5M+", label: "Revenue Generated" },
+        { number: "550", label: "Nigerian Vendors" },
+        { number: "2M", label: "Orders Processed" },
+        { number: "₦5M", label: "Revenue Generated" },
         { number: "99%", label: "Customer Satisfaction" }
       ];
     
