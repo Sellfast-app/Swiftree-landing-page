@@ -1,5 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+
 import { MessageCircle, ShoppingCart, BarChart3, Smartphone, Zap, Shield } from "lucide-react";
 import nigerianBusinessOwner1 from "@/assets/nigerian-business-owner-1.jpg";
 import nigerianBusinessOwner2 from "@/assets/nigerian-business-owner-2.jpg";
@@ -10,9 +9,7 @@ import OnlineSales from "./svgIcons/OnlineSales";
 import OfflineSales from "./svgIcons/OfflineSales";
 import DirectSales from "./svgIcons/DirectSales";
 import Wholesale from "./svgIcons/Wholesale";
-import OrderManagement from "./svgIcons/OrderManagement";
-import { QrCode, Link, Share2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+
 import { useState } from "react";
 import Paystack from "./svgIcons/Paystack";
 import Sendbox from "./svgIcons/Sendbox";
