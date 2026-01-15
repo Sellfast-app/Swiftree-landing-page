@@ -54,7 +54,7 @@ const About = () => {
             role: "Founder & CEO, Swiftree",
             image: "/josh.png",
             linkedin: "https://linkedin.com/in/joshua-ogbudu-6032b51b4",
-            experience: "Joshua Ogbudu is a data-driven entrepreneur with experience in fintech and telecommunications. Before founding Swiftree, he worked at PalmPay, a leading fintech company, and Huawei Technologies, a global telecommunications firm, where he led data and business intelligence initiatives. A graduate of Redeemer's University and Turing College (Lithuania), Joshua is passionate about leveraging AI and data to empower vendors and simplify digital commerce across Africa.",
+            experience: "Gen Z tech founder and former Business Intelligence Manager (Palmpay) with experience driving point-of-sale(POS) growth and contributing to over 450 million in monthly transaction volume within Nigeria's fintech ecosystem. Selected among 45 out of 2000+ candidates for a European Union-backed venture program in Lithuania. Holds a Postgraduate Diploma in Data Analytics from Turing College and a Bsc in Computer ",
             vision: "To revolutionize how businesses integrate sustainability into their core operations, making eco-conscious decisions the default choice for future growth."
         },
         {
