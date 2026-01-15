@@ -54,7 +54,7 @@ const About = () => {
             role: "Founder & CEO, Swiftree",
             image: "/josh.png",
             linkedin: "https://linkedin.com/in/joshua-ogbudu-6032b51b4",
-            experience: "Gen Z tech founder and former Business Intelligence Manager (Palmpay) with experience driving point-of-sale(POS) growth and contributing to over 450 million in monthly transaction volume within Nigeria's fintech ecosystem. Selected among 45 out of 2000+ candidates for a European Union-backed venture program in Lithuania. Holds a Postgraduate Diploma in Data Analytics from Turing College and a Bsc in Computer ",
+            experience: "Gen Z tech founder and former Business Intelligence Manager (Palmpay) with experience driving point-of-sale(POS) growth and contributing to over 450 million in monthly transaction volume within Nigeria's fintech ecosystem. Selected among 45 out of 2000+ candidates for a European Union-backed venture program in Lithuania. Holds a Postgraduate Diploma in Data Analytics from Turing College and a Bsc in Computer Science from Redeemer's University. Passionate about building scalable technology that powers commerce and economic growth across Africa",
             vision: "To revolutionize how businesses integrate sustainability into their core operations, making eco-conscious decisions the default choice for future growth."
         },
         {
