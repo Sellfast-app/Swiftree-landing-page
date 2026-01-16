@@ -64,7 +64,7 @@ const About = () => {
             role: "Co-founder & COO, Swiftree",
             image: "/dave.png",
             linkedin: "https://www.linkedin.com/in/david-ukap-a4a669173",
-            experience: "David Ukap, an accomplished Cyber Security Professional, NCSC Advisor, ensures operational excellence and robust security. A graduate of Redeemer's University and the University of Staffordshire with an MSc in Cybersecurity, David has over five years' experience developing security strategies for startups and businesses. A certified UK NCSC assessor, he has guided over 100 UK organizations in adopting stringent cybersecurity frameworks (CE, CE+, ISO 27001, ICA). He also publishes articles offering practical security advice for the digital economy.",
+            experience: "A UK National Cyber Security Center Advisor who has secured 100+ UK organizations with enterprise-grade frameworks (Cyber Essentials Plus, ISO 27001). BSc Computer Science (Redemeer's University), MSc Cybersecurity (University of Staffordshire). With over 5 years of experience driving security, infrastructure, and operational excellence, he has reduced security incidents by 90%, achieved 99.8% uptime, and scaled systems supporting over 10 million monthly transactions. As a published thought leader in IT and Cybersecurity, he translates technical depth into business growth .David is passionate about securing and accelerating the growth of AI-powered companies",
             vision: "To revolutionize how businesses integrate sustainability into their core operations, making eco-conscious decisions the default choice for future growth."
         },
         {
