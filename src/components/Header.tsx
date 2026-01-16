@@ -72,12 +72,12 @@ const Header = () => {
                 Pricing
               </a>
               
-              <a 
+              {/* <a 
                 href="#features" 
                 className={`${textColorClass} ${hoverColorClass} transition-colors`}
               >
                 Features
-              </a>
+              </a> */}
               <a 
                 href="/about" 
                 className={`${textColorClass} ${hoverColorClass} transition-colors ${isAboutPage ? 'font-semibold text-green-600' : ''}`}
@@ -133,13 +133,13 @@ const Header = () => {
          {isMenuOpen && (
             <div className="md:hidden">
               <div className={`px-2 pt-2 pb-3 space-y-1 ${isAboutPage ? 'bg-white' : 'bg-background'} border-t ${isAboutPage ? 'border-gray-200' : 'border-green-light/20'}`}>
-                <a
+                {/* <a
                   href="#features"
                   className={`block px-3 py-2 text-base font-medium ${mobileTextColorClass} transition-colors`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Features
-                </a>
+                </a> */}
                 <a
                   href="/about"
                   className={`block px-3 py-2 text-base font-medium ${mobileTextColorClass} transition-colors ${isAboutPage ? 'font-semibold text-green-600' : ''}`}
