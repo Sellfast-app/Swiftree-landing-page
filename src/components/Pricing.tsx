@@ -71,7 +71,7 @@ const PricingPlans = () => {
         ]
       },
       professional: {
-        price: "₦20,000",
+        price: "₦30,000",
         billing: "Billed biannually. Save ₦4,500 (15% off)",
         savings: "15",
         features: [
