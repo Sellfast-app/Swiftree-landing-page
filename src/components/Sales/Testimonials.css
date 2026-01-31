@@ -1,0 +1,39 @@
+@keyframes scrollUp {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+  
+  @keyframes scrollDown {
+    0% {
+      transform: translateY(-50%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-scroll-up {
+    animation: scrollUp 30s linear infinite;
+    will-change: transform;
+  }
+  
+  .animate-scroll-down {
+    animation: scrollDown 35s linear infinite;
+    will-change: transform;
+  }
+  
+  .animate-scroll-up-delayed {
+    animation: scrollUp 32s linear infinite;
+    will-change: transform;
+  }
+  
+  /* Pause animation on hover */
+  .animate-scroll-up:hover,
+  .animate-scroll-down:hover,
+  .animate-scroll-up-delayed:hover {
+    animation-play-state: paused;
+  }
