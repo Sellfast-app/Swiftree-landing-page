@@ -1,4 +1,6 @@
 import Footer from "@/components/Footer"
+import Business from "@/components/Sales/Business"
+import Cta from "@/components/Sales/Cta"
 import FAQ from "@/components/Sales/Faq"
 import Header from "@/components/Sales/Header"
 import Hero from "@/components/Sales/Hero"
@@ -13,7 +15,9 @@ const SalesPage = () => {
         <Hero/>
         <Testimonials/>
         <Problems/>
+        <Business/>
         <FAQ/>
+        <Cta/>
         <Footer/>
         </div>
   )
