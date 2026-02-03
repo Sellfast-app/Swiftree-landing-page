@@ -56,26 +56,12 @@ const Header = () => {
               className={`h-8 w-auto ${isAboutPage ? '' : 'drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]'}`}
             />  </a>
            
-            
          
           </div>
     
         
              {/* Mobile menu button */}
-             <div className="md:hidden">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={isAboutPage ? "hover:bg-gray-100 shadow-none" : "hover:bg-green-light/50"}
-              >
-                {isMenuOpen ? (
-                  <X className={`h-6 w-6 ${isAboutPage ? 'text-gray-900' : 'text-gray-900'}`} />
-                ) : (
-                  <Menu className={`h-6 w-6 ${isAboutPage ? 'text-gray-900' : 'text-gray-900'}`} />
-                )}
-              </Button>
-            </div>
+             <Button variant="ghost" className="text-white [text-shadow:_0_1px_2px_rgb(0_0_0_/_40%)]">Sign In</Button>
         </div>
          {/* Mobile Navigation */}
          {isMenuOpen && (

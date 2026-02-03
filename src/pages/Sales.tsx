@@ -6,6 +6,7 @@ import Header from "@/components/Sales/Header"
 import Hero from "@/components/Sales/Hero"
 import Problems from "@/components/Sales/Problems"
 import Testimonials from "@/components/Sales/Testimonials"
+import Work from "@/components/Sales/Work"
 
 
 const SalesPage = () => {
@@ -15,6 +16,7 @@ const SalesPage = () => {
         <Hero/>
         <Testimonials/>
         <Problems/>
+        <Work/>
         <Business/>
         <FAQ/>
         <Cta/>
