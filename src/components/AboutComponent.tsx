@@ -103,7 +103,7 @@ const About = () => {
             roleStyle: "bg-[#E9FBE1] text-[#123D00] border-[#123D00]",
             role: "Founding Operations Manager, Swiftree",
             image: "/Femi.png",
-            linkedin: "www.linkedin.com/in/femimisi",
+            linkedin: "https://www.linkedin.com/in/femimisi",
             experience: "Olatunji Femi is an Operations Manager skilled in streamlining processes, coordinating teams, and improving operational efficiency. He applies a data-driven, solutions-focused approach to challenges while supporting organizational goals with clear communication and disciplined execution. Olatunji holds a degree from the University of Ibadan, which strengthens his analytical and leadership foundation and supports his ability to deliver consistent, high-quality results.",
             vision: "To revolutionize how businesses integrate sustainability into their core operations, making eco-conscious decisions the default choice for future growth."
         },
