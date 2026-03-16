@@ -107,16 +107,6 @@ const About = () => {
             experience: "Olatunji Femi is an Operations Manager skilled in streamlining processes, coordinating teams, and improving operational efficiency. He applies a data-driven, solutions-focused approach to challenges while supporting organizational goals with clear communication and disciplined execution. Olatunji holds a degree from the University of Ibadan, which strengthens his analytical and leadership foundation and supports his ability to deliver consistent, high-quality results.",
             vision: "To revolutionize how businesses integrate sustainability into their core operations, making eco-conscious decisions the default choice for future growth."
         },
-        {
-            name: "Anthony Okolie",
-            nameColor: "text-[#123D00]",
-            roleStyle: "bg-[#E9FBE1] text-[#123D00] border-[#123D00]",
-            role: "Founding Backend Engineer, Swiftree",
-            image: "/Tony.png",
-            linkedin: "https://www.linkedin.com/in/kingtony-technologies",
-            experience: "Okolie Anthony is a  Backend Engineer whose first experience started  at Dispa8ch in 2023, developing his backend skills. He then completed a nine-month frontend internship at RavenPay Africa (2024-2025) while continuing to hone his backend expertise. In 2025, he co-founded Swiftree Technologies, contributing to a revolutionary e-commerce technology. That same year, he earned a bachelor's degree in Information Technology from FUTO.",
-            vision: "To revolutionize how businesses integrate sustainability into their core operations, making eco-conscious decisions the default choice for future growth."
-        },
     ];
 
     // Prepare items for infinite sliding effect
