@@ -163,7 +163,7 @@ const PricingPlans = () => {
                 <CardHeader className="pb-4">
                   <CardTitle className="text-xl font-bold mb-2">Starter</CardTitle>
                   <CardDescription className="text-sm text-gray-600">
-                    For business still figuring things out. <span className="font-semibold text-gray-900">YES, IT'S FREE FOR 1 MONTH</span>, with the starter plan, you can get started selling anything on Swiftree for Free.
+                    For business still figuring things out. <span className="font-semibold text-gray-900">YES, IT'S FREE FOR 14 DAYS</span>, with the starter plan, you can get started selling anything on Swiftree for Free.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
