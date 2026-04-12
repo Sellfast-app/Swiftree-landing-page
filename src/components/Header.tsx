@@ -39,7 +39,7 @@ const Header = () => {
     {
       name: "Starter",
       price: "Free for 14 days",
-      description: "Professional features for 1 month",
+      description: "Professional features for 14 days",
       features: ["WhatsApp Integration", "Product Catalog", "Order Management", "Basic Analytics"]
     },
     {
