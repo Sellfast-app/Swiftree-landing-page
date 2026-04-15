@@ -11,9 +11,9 @@ const PricingPlans = () => {
     monthly: {
       starter: {
         price: "Free",
-        billing: "No billing cycle. (₦0.00) for first month",
+        billing: "free trial for 14 days",
         features: [
-          "Professional features for 1 month",
+          "Professional features for 14 days",
           "WhatsApp Integration",
           "Product Catalog",
           "Order Management",
@@ -32,32 +32,32 @@ const PricingPlans = () => {
         ]
       }
     },
-    quarterly: {
-      starter: {
-        price: "Free",
-        billing: "No billing cycle. (₦0.00) for first month",
-        features: [
-          "Professional features for 1 month",
-          "WhatsApp Integration",
-          "Product Catalog",
-          "Order Management",
-          "Basic Analytics"
-        ]
-      },
-      professional: {
-        price: "₦15,000",
-        billing: "Billed quarterly. Save ₦1,500 (10% off)",
-        savings: "10",
-        features: [
-          "Custom storefront for SMEs",
-          "Advanced Analytics",
-          "Payment Integration",
-          "Unlimited Product Listings",
-          "24/7 Priority Support",
-          "Quarterly Business Review"
-        ]
-      }
-    },
+    // quarterly: {
+    //   starter: {
+    //     price: "Free",
+    //     billing: "No billing cycle. (₦0.00) for first month",
+    //     features: [
+    //       "Professional features for 1 month",
+    //       "WhatsApp Integration",
+    //       "Product Catalog",
+    //       "Order Management",
+    //       "Basic Analytics"
+    //     ]
+    //   },
+    //   professional: {
+    //     price: "₦15,000",
+    //     billing: "Billed quarterly. Save ₦1,500 (10% off)",
+    //     savings: "10",
+    //     features: [
+    //       "Custom storefront for SMEs",
+    //       "Advanced Analytics",
+    //       "Payment Integration",
+    //       "Unlimited Product Listings",
+    //       "24/7 Priority Support",
+    //       "Quarterly Business Review"
+    //     ]
+    //   }
+    // },
     biannually: {
       starter: {
         price: "Free",
@@ -84,32 +84,32 @@ const PricingPlans = () => {
         ]
       }
     },
-    yearly: {
-      starter: {
-        price: "Free",
-        billing: "No billing cycle. (₦0.00) for first month",
-        features: [
-          "Professional features for 1 month",
-          "WhatsApp Integration",
-          "Product Catalog",
-          "Order Management",
-          "Basic Analytics"
-        ]
-      },
-      professional: {
-        price: "₦60,000",
-        billing: "Billed yearly. Save ₦12,000 (20% off)",
-        savings: "20",
-        features: [
-          "Custom storefront for SMEs",
-          "Advanced Analytics",
-          "Payment Integration",
-          "Unlimited Product Listings",
-          "24/7 Priority Support",
-          "Quarterly Business Reviews",
-        ]
-      }
-    }
+    // yearly: {
+    //   starter: {
+    //     price: "Free",
+    //     billing: "No billing cycle. (₦0.00) for first month",
+    //     features: [
+    //       "Professional features for 1 month",
+    //       "WhatsApp Integration",
+    //       "Product Catalog",
+    //       "Order Management",
+    //       "Basic Analytics"
+    //     ]
+    //   },
+    //   professional: {
+    //     price: "₦60,000",
+    //     billing: "Billed yearly. Save ₦12,000 (20% off)",
+    //     savings: "20",
+    //     features: [
+    //       "Custom storefront for SMEs",
+    //       "Advanced Analytics",
+    //       "Payment Integration",
+    //       "Unlimited Product Listings",
+    //       "24/7 Priority Support",
+    //       "Quarterly Business Reviews",
+    //     ]
+    //   }
+    // }
   };
 
   const currentPlans = pricingData[selectedTab];
@@ -129,31 +129,31 @@ const PricingPlans = () => {
 
         {/* Tabs */}
         <Tabs defaultValue="monthly" className="w-full" onValueChange={setSelectedTab}>
-          <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-4 mb-12 h-auto p-1 bg-gray-100 rounded-xl">
+          <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-2 mb-12 h-auto p-1 bg-gray-100 rounded-xl">
             <TabsTrigger 
               value="monthly" 
               className="rounded-lg data-[state=active]:bg-[#4FCA6A] data-[state=active]:text-white py-3"
             >
               Monthly
             </TabsTrigger>
-            <TabsTrigger 
+            {/* <TabsTrigger 
               value="quarterly" 
               className="rounded-lg data-[state=active]:bg-[#4FCA6A] data-[state=active]:text-white py-3"
             >
               Quarterly
-            </TabsTrigger>
+            </TabsTrigger> */}
             <TabsTrigger 
               value="biannually" 
               className="rounded-lg data-[state=active]:bg-[#4FCA6A] data-[state=active]:text-white py-3"
             >
               Biannually
             </TabsTrigger>
-            <TabsTrigger 
+            {/* <TabsTrigger 
               value="yearly" 
               className="rounded-lg data-[state=active]:bg-[#4FCA6A] data-[state=active]:text-white py-3"
             >
               Yearly
-            </TabsTrigger>
+            </TabsTrigger> */}
           </TabsList>
 
           <TabsContent value={selectedTab} className="mt-0">
