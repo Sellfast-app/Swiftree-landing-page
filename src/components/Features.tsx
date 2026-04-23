@@ -22,6 +22,7 @@ import { Autoplay } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
+import Gig from "./svgIcons/Gig";
 
 const Features = () => {
   const [activePhase, setActivePhase] = useState(0);
@@ -65,11 +66,13 @@ const Features = () => {
   const partners = [
     { name: "PAYSTACK", logo: <Paystack />, description: "Official payment gateway" },
     { name: "SENDBOX", logo: <Sendbox />, description: "Trusted partner for delivery" },
+    { name: "GIG LOGISTICS", logo: <img src="/images.png" alt="" className="w-[65px] h-[60px]"/>, description: "Trusted partner for delivery" },
     { name: "GOOGLE", logo: <Google />, description: "Backed by google for operations" },
     { name: "RCCG", logo: <Rccg />, description: "Top vendor on Swiftree" },
     // Add more partners for better sliding effect
     { name: "PAYSTACK", logo: <Paystack />, description: "Official payment gateway" },
     { name: "SENDBOX", logo: <Sendbox />, description: "Trusted partner for delivery" },
+    { name: "GIG LOGISTICS", logo: <img src="/images.png" alt="" className="w-[65px] h-[60px]"/>, description: "Trusted partner for delivery" },
     { name: "GOOGLE", logo: <Google />, description: "Backed by google for operations" },
     { name: "RCCG", logo: <Rccg />, description: "Top vendor on Swiftree" },
   ]

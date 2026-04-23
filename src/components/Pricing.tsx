@@ -58,32 +58,32 @@ const PricingPlans = () => {
     //     ]
     //   }
     // },
-    biannually: {
-      starter: {
-        price: "Free",
-        billing: "No billing cycle. (₦0.00) for first month",
-        features: [
-          "Professional features for 1 month",
-          "WhatsApp Integration",
-          "Product Catalog",
-          "Order Management",
-          "Basic Analytics"
-        ]
-      },
-      professional: {
-        price: "₦30,000",
-        billing: "Billed biannually. Save ₦4,500 (15% off)",
-        savings: "15",
-        features: [
-          "Custom storefront for SMEs",
-          "Advanced Analytics",
-          "Payment Integration",
-          "Unlimited Product Listings",
-          "24/7 Priority Support",
-          "Biannual Business Review",
-        ]
-      }
-    },
+    // biannually: {
+    //   starter: {
+    //     price: "Free",
+    //     billing: "No billing cycle. (₦0.00) for first month",
+    //     features: [
+    //       "Professional features for 1 month",
+    //       "WhatsApp Integration",
+    //       "Product Catalog",
+    //       "Order Management",
+    //       "Basic Analytics"
+    //     ]
+    //   },
+    //   professional: {
+    //     price: "₦30,000",
+    //     billing: "Billed biannually. Save ₦4,500 (15% off)",
+    //     savings: "15",
+    //     features: [
+    //       "Custom storefront for SMEs",
+    //       "Advanced Analytics",
+    //       "Payment Integration",
+    //       "Unlimited Product Listings",
+    //       "24/7 Priority Support",
+    //       "Biannual Business Review",
+    //     ]
+    //   }
+    // },
     // yearly: {
     //   starter: {
     //     price: "Free",
@@ -129,7 +129,7 @@ const PricingPlans = () => {
 
         {/* Tabs */}
         <Tabs defaultValue="monthly" className="w-full" onValueChange={setSelectedTab}>
-          <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-2 mb-12 h-auto p-1 bg-gray-100 rounded-xl">
+          <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-1 mb-12 h-auto p-1 bg-gray-100 rounded-xl">
             <TabsTrigger 
               value="monthly" 
               className="rounded-lg data-[state=active]:bg-[#4FCA6A] data-[state=active]:text-white py-3"
@@ -142,12 +142,12 @@ const PricingPlans = () => {
             >
               Quarterly
             </TabsTrigger> */}
-            <TabsTrigger 
+            {/* <TabsTrigger 
               value="biannually" 
               className="rounded-lg data-[state=active]:bg-[#4FCA6A] data-[state=active]:text-white py-3"
             >
               Biannually
-            </TabsTrigger>
+            </TabsTrigger> */}
             {/* <TabsTrigger 
               value="yearly" 
               className="rounded-lg data-[state=active]:bg-[#4FCA6A] data-[state=active]:text-white py-3"
