@@ -22,7 +22,7 @@ const PricingPlans = () => {
       },
       professional: {
         price: "₦5,000",
-        billing: "Billed monthly. (₦15,000) per quarter",
+        billing: "Billed monthly. ",
         features: [
           "Custom storefront for SMEs",
           "Advanced Analytics",
