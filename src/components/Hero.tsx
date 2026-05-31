@@ -43,7 +43,7 @@ const Hero = () => {
                 className="bg-white hover:opacity-90 transition-opacity shadow-elegant text-lg text-[#123D00] px-8 py-6"
                 asChild
               >
-                <a href="https://vendor-plum.vercel.app/signup" target="_blank" rel="noopener noreferrer">
+                <a href="https://vendor.swiftree.app/signup" target="_blank" rel="noopener noreferrer">
                   Start Free Trial
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
