@@ -182,7 +182,9 @@ const PricingPlans = () => {
                   </ul>
 
                   <Button className="w-full bg-[#4FCA6A] hover:bg-[#3BA855] text-white py-6 rounded-xl text-base font-semibold">
+                  <a href="https://vendor.swiftree.app/signup" target="_blank" rel="noopener noreferrer">
                     Start Free Trial
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
