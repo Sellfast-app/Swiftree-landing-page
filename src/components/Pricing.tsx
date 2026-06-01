@@ -181,11 +181,11 @@ const PricingPlans = () => {
                     ))}
                   </ul>
 
-                  <Button className="w-full bg-[#4FCA6A] hover:bg-[#3BA855] text-white py-6 rounded-xl text-base font-semibold">
                   <a href="https://vendor.swiftree.app/signup" target="_blank" rel="noopener noreferrer">
-                    Start Free Trial
-                    </a>
-                  </Button>
+                    <Button className="w-full bg-[#4FCA6A] hover:bg-[#3BA855] text-white py-6 rounded-xl text-base font-semibold">
+                      Start Free Trial
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
 
@@ -223,9 +223,11 @@ const PricingPlans = () => {
                     ))}
                   </ul>
 
-                  <Button className="w-full bg-[#4FCA6A] hover:bg-[#3BA855] text-white py-6 rounded-xl text-base font-semibold">
-                    Get Started
-                  </Button>
+                  <a href="https://vendor.swiftree.app/login" target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full bg-[#4FCA6A] hover:bg-[#3BA855] text-white py-6 rounded-xl text-base font-semibold">
+                      Get Started
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
             </div>
