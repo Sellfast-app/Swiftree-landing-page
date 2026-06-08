@@ -1,218 +1,301 @@
+const Section = ({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) => (
+  <section className="space-y-4">
+    <h2 className="text-2xl font-bold text-foreground">{title}</h2>
+    <div className="space-y-4 text-muted-foreground leading-7">{children}</div>
+  </section>
+);
+
+const Subsection = ({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) => (
+  <div className="space-y-3">
+    <h3 className="text-lg font-semibold text-foreground">{title}</h3>
+    {children}
+  </div>
+);
+
+const TermsList = ({ children }: { children: React.ReactNode }) => (
+  <ul className="ml-5 list-disc space-y-2">{children}</ul>
+);
+
 const Privacy = () => {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <section className="py-20 px-4 md:px-8 lg:px-16 border-b">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Swiftree Technologies – Terms of Use</h1>
-          <p className="text-muted-foreground">
-            Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+    <main className="min-h-screen bg-background">
+      <header className="border-b px-4 py-20 md:px-8 lg:px-16">
+        <div className="mx-auto max-w-4xl">
+          <p className="mb-3 text-sm font-semibold uppercase text-green-primary">
+            Swiftree Technologies
+          </p>
+          <h1 className="mb-4 text-4xl font-bold md:text-5xl">
+            Vendor Terms of Use
+          </h1>
+          <p className="max-w-2xl text-muted-foreground">
+            For merchants and businesses selling on the Swiftree platform
           </p>
         </div>
-      </section>
+      </header>
 
-      {/* Content */}
-      <section className="py-12 px-4 md:px-8 lg:px-16">
-        <div className="max-w-4xl mx-auto space-y-12">
-          {/* Introduction */}
-          <div>
-            <p className="text-muted-foreground leading-relaxed">
-              At Swiftree Technologies ("Swiftree", "we", "our", or "us"), we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our AI-powered social commerce platform, including our tools for digital storefronts, payment processing, logistics coordination, and customer engagement services.
+      <div className="px-4 py-12 md:px-8 lg:px-16">
+        <article className="mx-auto max-w-4xl space-y-12">
+          <section className="space-y-4 text-muted-foreground leading-7">
+            <p>
+              Welcome to Swiftree Technologies (&quot;Swiftree&quot;,
+              &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;). These Terms
+              of Use govern your access to the Swiftree platform, including our
+              AI-powered social commerce tools, storefronts, payment
+              integrations, and logistics coordination.
             </p>
-            <p className="text-muted-foreground leading-relaxed mt-4">
-              By registering, subscribing to, or using Swiftree, you agree to the collection and use of information in accordance with this policy. This Privacy Policy is incorporated into and subject to our Terms of Use.
+            <p>
+              By registering, subscribing to, or using Swiftree as a Vendor, you
+              agree to be bound by these Terms.
             </p>
-          </div>
+          </section>
 
-          {/* Information We Collect */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Information We Collect</h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-lg font-semibold mb-2">Information You Provide</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  When you register as a vendor or use our platform, we collect:
-                </p>
-                <ul className="list-disc list-inside mt-2 text-muted-foreground space-y-1 ml-4">
-                  <li><strong>Account Information:</strong> Name, email address, phone number, business name, and credentials</li>
-                  <li><strong>Business Details:</strong> Company information, products/services offered, pricing, and business documentation</li>
-                  <li><strong>Financial Information:</strong> Nigerian bank account details for settlement purposes (processed securely via Paystack)</li>
-                  <li><strong>Customer Interaction Data:</strong> Communications with customers through our platform</li>
-                  <li><strong>Order Information:</strong> Products sold, transaction details, and customer delivery information</li>
-                </ul>
-              </div>
+          <Section title="1. Overview & Eligibility">
+            <p>
+              Swiftree provides tools to automate customer responses, enable
+              payments, and coordinate last-mile delivery. To use Swiftree, you
+              must:
+            </p>
+            <TermsList>
+              <li>Be at least 18 years old.</li>
+              <li>
+                Own or manage a legitimate business and hold authority to sell
+                the listed products.
+              </li>
+              <li>
+                Provide accurate, complete information and comply with all
+                applicable Nigerian laws.
+              </li>
+            </TermsList>
+            <p>
+              Swiftree reserves the right to suspend or terminate accounts
+              containing false, misleading, or fraudulent information.
+            </p>
+          </Section>
 
-              <div>
-                <h3 className="text-lg font-semibold mb-2">Information Collected Automatically</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  When you access our platform, we automatically collect:
-                </p>
-                <ul className="list-disc list-inside mt-2 text-muted-foreground space-y-1 ml-4">
-                  <li><strong>Device and Usage Data:</strong> IP address, browser type, device information, platform usage patterns, and performance metrics</li>
-                  <li><strong>Transaction Data:</strong> Information about transactions processed through Paystack integration</li>
-                  <li><strong>Analytics Data:</strong> Storefront performance, customer engagement metrics, and sales analytics</li>
-                  <li><strong>Logistics Data:</strong> Delivery tracking and coordination information from third-party logistics partners</li>
-                </ul>
-              </div>
+          <Section title="2. Subscription & Fees">
+            <p>
+              Swiftree operates on a subscription model, billed in advance and
+              non-refundable. Failure to pay may result in service suspension.
+            </p>
 
-              <div>
-                <h3 className="text-lg font-semibold mb-2">Customer Information Collected Through Your Storefront</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  As a vendor using Swiftree, you may collect customer information through your digital storefront. This data is processed on your behalf and you are responsible for complying with applicable privacy laws. We act as a data processor for such information.
-                </p>
-              </div>
-            </div>
-          </div>
+            <Subsection title="2.1 Payment Processing and Fees">
+              <p>Standard payments are processed through Paystack.</p>
+              <TermsList>
+                <li>
+                  <strong className="text-foreground">
+                    Paystack Processing Fee:
+                  </strong>{" "}
+                  1.5% + NGN 100 per transaction. The NGN 100 fee is waived for
+                  transactions below NGN 2,500.
+                </li>
+                <li>
+                  <strong className="text-foreground">
+                    Swiftree Platform Fee:
+                  </strong>{" "}
+                  1.5% per transaction.
+                </li>
+                <li>
+                  <strong className="text-foreground">
+                    Disbursement Fee:
+                  </strong>{" "}
+                  NGN 100 flat fee for bank transfers.
+                </li>
+              </TermsList>
+            </Subsection>
 
-          {/* How We Use Your Information */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">How We Use Your Information</h2>
-            <p className="text-muted-foreground leading-relaxed mb-3">
-              We use the collected information to:
-            </p>
-            <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-              <li>Provide, maintain, and improve our AI-powered social commerce platform</li>
-              <li>Process payments through Paystack integration and manage settlements to your Nigerian bank account</li>
-              <li>Coordinate logistics and deliveries through third-party logistics partners</li>
-              <li>Operate and manage your digital storefront and customer engagement tools</li>
-              <li>Generate analytics and performance insights for your business</li>
-              <li>Communicate with you about platform updates, subscription matters, and service announcements</li>
-              <li>Detect, prevent, and address fraud, security, or technical issues</li>
-              <li>Comply with Nigerian laws and regulations, including tax and financial reporting requirements</li>
-              <li>Train and improve our AI models for better customer service automation</li>
-            </ul>
-          </div>
+            <Subsection title="2.2 Buy Now, Pay Later (Klump Integration)">
+              <p>
+                Swiftree integrates with Klump to allow your customers to
+                purchase via installment payments.
+              </p>
+              <TermsList>
+                <li>
+                  <strong className="text-foreground">Credit Risk:</strong>{" "}
+                  Klump assumes the credit risk for the customer. You will
+                  receive the full settlement for the purchase, minus
+                  applicable Klump and Swiftree transaction fees, upfront just
+                  like a standard card transaction.
+                </li>
+                <li>
+                  <strong className="text-foreground">
+                    Klump Transaction Fees:
+                  </strong>{" "}
+                  Payments processed via Klump may be subject to a different
+                  transaction fee structure, which will be displayed in your
+                  Vendor dashboard.
+                </li>
+                <li>
+                  <strong className="text-foreground">
+                    Refunds & Disputes:
+                  </strong>{" "}
+                  If a customer requests a refund for a Klump transaction, the
+                  refund must be processed through the Swiftree platform to
+                  ensure Klump is notified and can adjust the customer&apos;s
+                  loan balance. Processing a refund outside the platform for a
+                  Klump order violates these Terms. Swiftree is not liable for
+                  customer defaults on Klump loans.
+                </li>
+              </TermsList>
+            </Subsection>
 
-          {/* Data Sharing */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">How We Share Your Information</h2>
-            <p className="text-muted-foreground leading-relaxed mb-3">
-              We share information with third parties only as necessary to provide our services:
-            </p>
-            <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-              <li><strong>Payment Processors:</strong> We share transaction data with Paystack for payment processing and compliance purposes</li>
-              <li><strong>Logistics Partners:</strong> We share delivery information with third-party logistics providers (e.g., Sendbox) to coordinate last-mile delivery</li>
-              <li><strong>Service Providers:</strong> We engage trusted third parties for hosting, analytics, customer support, and technical maintenance</li>
-              <li><strong>Legal and Regulatory Authorities:</strong> We may disclose information when required by Nigerian law or in response to lawful requests</li>
-              <li><strong>Business Transfers:</strong> In connection with any merger, acquisition, or sale of company assets</li>
-              <li><strong>With Your Consent:</strong> For any other purpose disclosed with your explicit consent</li>
-            </ul>
-            <p className="text-muted-foreground leading-relaxed mt-4">
-              <strong>Important:</strong> Swiftree acts as a technology infrastructure provider and does not directly hold customer funds. All payments are processed through Paystack's secure infrastructure.
-            </p>
-          </div>
+            <Subsection title="2.3 Settlements">
+              <p>
+                Funds are settled to your valid Nigerian bank account once
+                weekly, minus applicable fees. Swiftree is not liable for delays
+                caused by public holidays, banking systems, Klump processing
+                delays, or incorrect account details.
+              </p>
+            </Subsection>
+          </Section>
 
-          {/* Data Security */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Data Security</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              We implement industry-standard security measures to protect your information, including encryption, access controls, and secure data transmission. Our payment processing is handled through Paystack, which is PCI DSS compliant. However, no electronic transmission or storage method is 100% secure, and we cannot guarantee absolute security.
+          <Section title="3. Logistics & Delivery">
+            <p>
+              Swiftree coordinates deliveries through partners including
+              Sendbox, GIG Logistics, and Chowdeck. Swiftree does not own
+              delivery fleets and bears no liability for losses or delays
+              caused by these partners.
             </p>
-          </div>
 
-          {/* Your Rights */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Your Privacy Rights</h2>
-            <p className="text-muted-foreground leading-relaxed mb-3">
-              Under applicable laws, including Nigerian data protection regulations, you may have the right to:
-            </p>
-            <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-              <li>Access and receive a copy of your personal data</li>
-              <li>Request correction of inaccurate or incomplete information</li>
-              <li>Request deletion of your personal data, subject to legal retention requirements</li>
-              <li>Object to processing of your personal data</li>
-              <li>Request restriction of processing in certain circumstances</li>
-              <li>Data portability for information you provided</li>
-              <li>Withdraw consent at any time, without affecting lawfulness of prior processing</li>
-            </ul>
-            <p className="text-muted-foreground leading-relaxed mt-4">
-              To exercise these rights, contact us at support@swiftree.app. We may require verification of your identity before processing certain requests.
-            </p>
-          </div>
+            <Subsection title="3.1 Timelines & Volumetric Weights">
+              <TermsList>
+                <li>
+                  Timelines provided by GIG and Sendbox are estimates. Delivery
+                  zones are subject to change based on the courier&apos;s
+                  routing capabilities.
+                </li>
+                <li>
+                  For Sendbox and GIG, shipping fees are calculated using the
+                  actual weight or volumetric weight of the package, whichever
+                  is higher. You are responsible for entering accurate product
+                  dimensions. Under-declared weights may result in penalty
+                  deductions from your payout.
+                </li>
+                <li>
+                  <strong className="text-foreground">Cutoff:</strong> A daily
+                  pickup cutoff time of 4:00 PM applies. Orders processed after
+                  4:00 PM are scheduled for the next working day.
+                </li>
+              </TermsList>
+            </Subsection>
 
-          {/* International Data Transfers */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">International Data Transfers</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Your information may be transferred to and processed in countries other than Nigeria, including countries that may have different data protection laws. We ensure appropriate safeguards are in place for such transfers, including standard contractual clauses and adequacy decisions where applicable.
-            </p>
-          </div>
+            <Subsection title="3.2 Returns and Failed Deliveries">
+              <p>
+                Delivery partners, including GIG and Sendbox, will make standard
+                delivery attempts, up to three. If unsuccessful, the parcel is
+                returned to you. Returns are billed at the standard return
+                tariff rate of the respective logistics partner and will be
+                automatically deducted from your designated logistics wallet or
+                next settlement.
+              </p>
+            </Subsection>
 
-          {/* Data Retention */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Data Retention</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              We retain your personal information only as long as necessary to:
-            </p>
-            <ul className="list-disc list-inside text-muted-foreground space-y-2 mt-2 ml-4">
-              <li>Provide the services you requested</li>
-              <li>Comply with legal obligations (including tax, accounting, and financial reporting requirements under Nigerian law)</li>
-              <li>Resolve disputes and enforce our agreements</li>
-              <li>Maintain business records for legitimate business purposes</li>
-            </ul>
-            <p className="text-muted-foreground leading-relaxed mt-4">
-              Transaction and settlement data is retained as required by financial regulations. Upon termination of your account, we will retain and use your information as necessary to comply with legal obligations.
-            </p>
-          </div>
+            <Subsection title="3.3 Claims for Loss or Damage">
+              <p>
+                Claims for lost or damaged goods via GIG or Sendbox must be
+                submitted within 48 hours of delivery or receipt, including
+                waybill details and clear photographs.
+              </p>
+              <p>
+                <strong className="text-foreground">Liability Cap:</strong>{" "}
+                Liability for lost or damaged items is strictly capped in
+                accordance with Sendbox&apos;s and GIG&apos;s declared value and
+                insurance policies. Swiftree will solely act as an intermediary
+                to file the claim on your behalf but does not guarantee claim
+                payouts or cover shortfalls.
+              </p>
+            </Subsection>
 
-          {/* Third-Party Services */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Third-Party Services</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Our platform integrates with third-party services that have their own privacy policies:
-            </p>
-            <ul className="list-disc list-inside text-muted-foreground space-y-2 mt-2 ml-4">
-              <li><strong>Paystack:</strong> Our payment processing partner. Their privacy policy governs how they handle payment data</li>
-              <li><strong>Logistics Providers:</strong> Third-party delivery services that handle shipment and delivery information</li>
-              <li><strong>Cloud Services:</strong> Hosting and infrastructure providers that store platform data</li>
-            </ul>
-            <p className="text-muted-foreground leading-relaxed mt-4">
-              We are not responsible for the privacy practices of these third parties. We encourage you to review their privacy policies.
-            </p>
-          </div>
+            <Subsection title="3.4 Vendor Responsibilities">
+              <p>
+                You are solely responsible for providing complete delivery
+                addresses, truthful waybill descriptions, and properly
+                packaging items to withstand transit. Any costs arising from
+                incorrect details, redelivery, or misdeclaration will be
+                charged to you.
+              </p>
+            </Subsection>
 
-          {/* AI and Automated Processing */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">AI and Automated Processing</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Our platform uses artificial intelligence to automate customer responses, optimize storefront performance, and provide business insights. This involves automated processing of data to improve service delivery. You may request human intervention or challenge decisions made solely by automated means by contacting us.
-            </p>
-          </div>
+            <Subsection title="3.5 Cash on Delivery Policy">
+              <p>
+                Cash on Delivery is not supported. All orders must be prepaid.
+                Attempting to process Cash on Delivery outside the platform
+                constitutes a material breach of these Terms and will result in
+                immediate account suspension.
+              </p>
+            </Subsection>
 
-          {/* Children's Privacy */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Children's Privacy</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Our services are intended for business users who are at least 18 years old. We do not knowingly collect personal information from individuals under 18. If you become aware that a child has provided us with personal information, please contact us immediately.
-            </p>
-          </div>
+            <Subsection title="3.6 Chowdeck Partner Deliveries">
+              <p>For immediate or local deliveries via Chowdeck:</p>
+              <TermsList>
+                <li>You must ensure order accuracy before dispatch.</li>
+                <li>
+                  If the recipient fails to take delivery due to unavailability
+                  or incorrect address details, the order is marked as failed.
+                </li>
+                <li>
+                  Missing or tampered items must be reported immediately upon
+                  delivery.
+                </li>
+              </TermsList>
+            </Subsection>
+          </Section>
 
-          {/* Changes to Policy */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Changes to This Privacy Policy</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              We may update this Privacy Policy periodically. We will notify you of material changes through email or platform notifications. The "Last updated" date at the top indicates when revisions were made. Continued use of Swiftree after changes constitutes acceptance of the updated policy.
+          <Section title="4. Prohibited Products">
+            <p>
+              You may not sell illegal or restricted goods, counterfeit
+              products, fraudulent schemes, or hazardous materials prohibited
+              by Sendbox or GIG. Violations result in immediate termination and
+              potential legal action.
             </p>
-          </div>
+          </Section>
 
-          {/* Contact */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              For questions, concerns, or to exercise your privacy rights:
+          <Section title="5. Intellectual Property">
+            <p>
+              Swiftree owns all platform intellectual property. You retain
+              ownership of your product content but grant Swiftree a license to
+              display it for platform operations.
             </p>
-            <div className="mt-4 text-muted-foreground space-y-2">
-              <p>Email: support@swiftree.app</p>
-              <p>Swiftree Technologies</p>
-              <p>Lagos, Nigeria</p>
-            </div>
-            <p className="text-muted-foreground leading-relaxed mt-4">
-              For payment-related inquiries, please also refer to Paystack's support channels as indicated in their privacy policy.
+          </Section>
+
+          <Section title="6. Limitation of Liability">
+            <p>
+              Swiftree provides infrastructure &quot;as is&quot;. We do not
+              guarantee sales volume, customer behavior, Klump approval rates,
+              logistics performance, or payment processor uptime. We are not
+              liable for indirect, incidental, or consequential losses.
             </p>
-          </div>
-        </div>
-      </section>
-    </div>
+          </Section>
+
+          <Section title="7. Termination">
+            <p>
+              Swiftree may suspend or terminate accounts that violate these
+              Terms, engage in fraud, or fail to meet payment obligations. You
+              may terminate usage at any time, subject to settling outstanding
+              obligations.
+            </p>
+          </Section>
+
+          <Section title="8. Governing Law">
+            <p>
+              These Terms are governed by the laws of the Federal Republic of
+              Nigeria.
+            </p>
+          </Section>
+        </article>
+      </div>
+    </main>
   );
 };
 
