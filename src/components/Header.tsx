@@ -84,6 +84,12 @@ const Header = () => {
               >
                 About
               </a>
+              <a
+                href="/marketplace"
+                className={`${textColorClass} ${hoverColorClass} transition-colors`}
+              >
+                Marketplace
+              </a>
               <a 
                 href="/privacy" 
                 className={`${textColorClass} ${hoverColorClass} transition-colors`}
@@ -153,6 +159,13 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Privacy
+                </a>
+                <a
+                  href="/marketplace"
+                  className={`block px-3 py-2 text-base font-medium ${mobileTextColorClass} transition-colors`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Marketplace
                 </a>
                 <div className="px-3 py-2">
                   <div className={`text-base font-medium ${isAboutPage ? 'text-gray-900' : 'text-foreground'} mb-2`}>Pricing</div>
