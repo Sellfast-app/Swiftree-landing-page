@@ -45,6 +45,16 @@ const categories: Category[] = [
 
 const vendors: Vendor[] = [
   {
+    id: 5,
+    name: "Item7 Go",
+    banner: "/PHOTO-2026-07-24-15-42-25.jpg",
+    rating: 4.4,
+    reviews: 33,
+    eta: "20 - 35 mins",
+    category: "Party Rice · Shawarma",
+    href: "https://wa.me/2348062183049?text=I%20want%20to%20order%20food%20from%20item%207go",
+  },
+  {
     id: 1,
     name: "Royal Spoon",
     banner: "/PHOTO-2026-07-24-15-36-22.jpg",
@@ -83,16 +93,6 @@ const vendors: Vendor[] = [
     eta: "30 - 45 mins",
     category: "Grills · Pepper Soup · Pasta",
     href: "https://storefront.swiftree.app/storefront/3a94761a-3f8e-4599-86ea-0029ecdc9e46",
-  },
-  {
-    id: 5,
-    name: "Item7 Go",
-    banner: "/PHOTO-2026-07-24-15-42-25.jpg",
-    rating: 4.4,
-    reviews: 33,
-    eta: "20 - 35 mins",
-    category: "Party Rice · Shawarma",
-    href: "https://wa.me/2348062183049",
   },
 ];
 
