@@ -236,7 +236,7 @@ const Marketplace = () => {
         <section className="pt-8">
           <div className="flex items-center justify-between gap-4">
             <div>
-              <h1 className="text-2xl font-bold tracking-normal md:text-3xl">Swiftree Marketplace</h1>
+              <h1 className="text-2xl font-bold tracking-normal md:text-3xl">Swiftree market place - Redemption city network</h1>
               <p className="mt-2 max-w-2xl text-sm text-[#6F756F] md:text-base">
                 Browse selected stores currently growing on the Tree.
               </p>
