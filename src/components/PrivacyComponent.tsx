@@ -86,8 +86,8 @@ const Privacy = () => {
 
           <Section title="2. Subscription & Fees">
             <p>
-              Swiftree operates on a subscription model, billed in advance and
-              non-refundable. Failure to pay may result in service suspension.
+              Swiftree operates on a subscription model (billed in advance,
+              non-refundable). Failure to pay may result in service suspension.
             </p>
 
             <Subsection title="2.1 Payment Processing and Fees">
@@ -97,8 +97,8 @@ const Privacy = () => {
                   <strong className="text-foreground">
                     Paystack Processing Fee:
                   </strong>{" "}
-                  1.5% + NGN 100 per transaction. The NGN 100 fee is waived for
-                  transactions below NGN 2,500.
+                  1.5% + ₦100 per transaction (the ₦100 is waived for
+                  transactions below ₦2,500).
                 </li>
                 <li>
                   <strong className="text-foreground">
@@ -110,7 +110,7 @@ const Privacy = () => {
                   <strong className="text-foreground">
                     Disbursement Fee:
                   </strong>{" "}
-                  NGN 100 flat fee for bank transfers.
+                  ₦100 flat fee for bank transfers.
                 </li>
               </TermsList>
             </Subsection>
@@ -133,8 +133,8 @@ const Privacy = () => {
                     Klump Transaction Fees:
                   </strong>{" "}
                   Payments processed via Klump may be subject to a different
-                  transaction fee structure, which will be displayed in your
-                  Vendor dashboard.
+                  transaction fee structure, which will be totalled and
+                  displayed to your customers at checkout.
                 </li>
                 <li>
                   <strong className="text-foreground">
@@ -144,8 +144,10 @@ const Privacy = () => {
                   refund must be processed through the Swiftree platform to
                   ensure Klump is notified and can adjust the customer&apos;s
                   loan balance. Processing a refund outside the platform for a
-                  Klump order violates these Terms. Swiftree is not liable for
-                  customer defaults on Klump loans.
+                  Klump order violates these Terms, refunds exclude any
+                  transaction fees paid at checkout when the item was newly
+                  purchased. Swiftree is not liable for customer defaults on
+                  Klump loans.
                 </li>
               </TermsList>
             </Subsection>
@@ -176,11 +178,11 @@ const Privacy = () => {
                   routing capabilities.
                 </li>
                 <li>
-                  For Sendbox and GIG, shipping fees are calculated using the
-                  actual weight or volumetric weight of the package, whichever
-                  is higher. You are responsible for entering accurate product
-                  dimensions. Under-declared weights may result in penalty
-                  deductions from your payout.
+                  For Sendbox and GIG, shipping fees are calculated based on
+                  either the actual weight or the volumetric weight of the
+                  package (whichever is higher). You are responsible for
+                  entering accurate product dimensions. Under-declared weights
+                  may result in penalty deductions from your payout.
                 </li>
                 <li>
                   <strong className="text-foreground">Cutoff:</strong> A daily
@@ -209,11 +211,21 @@ const Privacy = () => {
               </p>
               <p>
                 <strong className="text-foreground">Liability Cap:</strong>{" "}
-                Liability for lost or damaged items is strictly capped in
-                accordance with Sendbox&apos;s and GIG&apos;s declared value and
-                insurance policies. Swiftree will solely act as an intermediary
-                to file the claim on your behalf but does not guarantee claim
-                payouts or cover shortfalls.
+                Liability for lost or damaged items is strictly capped at a
+                maximum of ₦50,000 per claim, in accordance with Sendbox&apos;s
+                and GIG&apos;s declared value/insurance policies, regardless of
+                the item&apos;s declared or sale value. Swiftree will solely act
+                as an intermediary to file the claim on your behalf but does
+                not guarantee claim payouts and does not cover any shortfall
+                between the item&apos;s value and the ₦50,000 cap.
+              </p>
+              <p>
+                <strong className="text-foreground">High-Value Items:</strong>{" "}
+                As the liability cap applies regardless of item value, you are
+                strongly advised to account for this limit when listing and
+                pricing items above ₦50,000. Swiftree recommends that Vendors
+                independently insure high-value shipments, as any loss in
+                excess of the cap is borne solely by the Vendor.
               </p>
             </Subsection>
 
