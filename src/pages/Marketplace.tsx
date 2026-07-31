@@ -94,6 +94,16 @@ const vendors: Vendor[] = [
     category: "Grills · Pepper Soup · Pasta",
     href: "https://storefront.swiftree.app/storefront/3a94761a-3f8e-4599-86ea-0029ecdc9e46",
   },
+  {
+    id: 6,
+    name: "Phunmite",
+    banner: "/WhatsApp Image 2026-07-31 at 08.05.05.jpeg",
+    rating: 4.5,
+    reviews: 29,
+    eta: "30 - 45 mins",
+    category: "Cakes · Pastries · Cookies",
+    href: "https://storefront.swiftree.app/storefront/f8641d80-7b57-438a-a9e6-257f396a2ce9",
+  },
 ];
 
 const filterOptions = ["Discounts", "Open Now", "Pickup", "Under 30 mins"];
