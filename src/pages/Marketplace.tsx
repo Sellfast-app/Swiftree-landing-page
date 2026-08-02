@@ -104,6 +104,16 @@ const vendors: Vendor[] = [
     category: "Cakes · Pastries · Cookies",
     href: "https://storefront.swiftree.app/storefront/f8641d80-7b57-438a-a9e6-257f396a2ce9",
   },
+  {
+    id: 7,
+    name: "Dean's Toasties",
+    banner: "/WhatsApp Image 2026-08-02 at 08.03.06.jpeg",
+    rating: 4.6,
+    reviews: 25,
+    eta: "30 - 45 mins",
+    category: "Cakes · Pastries · Cookies",
+    href: "https://storefront.swiftree.app/storefront/d6f56148-123f-4ad0-b500-5457e5d33cd8",
+  },
 ];
 
 const filterOptions = ["Discounts", "Open Now", "Pickup", "Under 30 mins"];
