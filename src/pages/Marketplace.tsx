@@ -52,7 +52,7 @@ const vendors: Vendor[] = [
     reviews: 33,
     eta: "20 - 35 mins",
     category: "Party Rice · Shawarma",
-    href: "https://wa.me/2349019862463?text=I%20want%20to%20order%20food%20from%20item%207go",
+    href: "https://wa.me/2349019862463?text=I%20want%20to%20order%20item%207go",
   },
   {
     id: 1,
