@@ -5,7 +5,7 @@ function Stats() {
     const stats = [
         { number: "10,000", label: "Nigerian Vendors" },
         { number: "50M", label: "Orders Processed" },
-        { number: "₦100M+", label: "Revenue Generated" },
+        { number: "₦200M+", label: "Revenue Generated" },
         { number: "99%", label: "Customer Satisfaction" }
       ];
     
