@@ -84,12 +84,12 @@ const Header = () => {
               >
                 About
               </a>
-              <a
+              {/* <a
                 href="/marketplace"
                 className={`${textColorClass} ${hoverColorClass} transition-colors`}
               >
                 Marketplace
-              </a>
+              </a> */}
               <a 
                 href="/privacy" 
                 className={`${textColorClass} ${hoverColorClass} transition-colors`}
@@ -160,13 +160,13 @@ const Header = () => {
                 >
                   Privacy
                 </a>
-                <a
+                {/* <a
                   href="/marketplace"
                   className={`block px-3 py-2 text-base font-medium ${mobileTextColorClass} transition-colors`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Marketplace
-                </a>
+                </a> */}
                 <div className="px-3 py-2">
                   <div className={`text-base font-medium ${isAboutPage ? 'text-gray-900' : 'text-foreground'} mb-2`}>Pricing</div>
                   {pricingPlans.map((plan) => (
